@@ -1,0 +1,1782 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+15/11/14 03:03:44 INFO SparkContext: Running Spark version 1.5.1
+15/11/14 03:03:44 INFO SecurityManager: Changing view acls to: dingz
+15/11/14 03:03:44 INFO SecurityManager: Changing modify acls to: dingz
+15/11/14 03:03:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dingz); users with modify permissions: Set(dingz)
+15/11/14 03:03:45 INFO Slf4jLogger: Slf4jLogger started
+15/11/14 03:03:45 INFO Remoting: Starting remoting
+15/11/14 03:03:45 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@128.2.13.161:35207]
+15/11/14 03:03:45 INFO Utils: Successfully started service 'sparkDriver' on port 35207.
+15/11/14 03:03:45 INFO SparkEnv: Registering MapOutputTracker
+15/11/14 03:03:45 INFO SparkEnv: Registering BlockManagerMaster
+15/11/14 03:03:45 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5cf4739f-1246-4243-bd8b-85e554524bbe
+15/11/14 03:03:45 INFO MemoryStore: MemoryStore started with capacity 1060.3 MB
+15/11/14 03:03:45 INFO HttpFileServer: HTTP File server directory is /tmp/spark-2a4975c3-d2ec-4faa-aebf-c896f50dd7a5/httpd-77f465b6-b43a-49f7-91a9-5bbe2e61cac0
+15/11/14 03:03:45 INFO HttpServer: Starting HTTP Server
+15/11/14 03:03:45 INFO Utils: Successfully started service 'HTTP file server' on port 43250.
+15/11/14 03:03:45 INFO SparkEnv: Registering OutputCommitCoordinator
+15/11/14 03:03:46 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+15/11/14 03:03:46 INFO SparkUI: Started SparkUI at http://128.2.13.161:4040
+15/11/14 03:03:46 INFO Utils: Copying /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py to /tmp/spark-2a4975c3-d2ec-4faa-aebf-c896f50dd7a5/userFiles-f94b2abb-44c7-42f9-a299-79dfcd3743e2/dsgd_mf.py
+15/11/14 03:03:46 INFO SparkContext: Added file file:/afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py at file:/afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py with timestamp 1447488226243
+15/11/14 03:03:46 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+15/11/14 03:03:46 INFO Executor: Starting executor ID driver on host localhost
+15/11/14 03:03:46 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35937.
+15/11/14 03:03:46 INFO NettyBlockTransferService: Server created on 35937
+15/11/14 03:03:46 INFO BlockManagerMaster: Trying to register BlockManager
+15/11/14 03:03:46 INFO BlockManagerMasterEndpoint: Registering block manager localhost:35937 with 1060.3 MB RAM, BlockManagerId(driver, localhost, 35937)
+15/11/14 03:03:46 INFO BlockManagerMaster: Registered BlockManager
+15/11/14 03:03:47 INFO MemoryStore: ensureFreeSpace(45712) called with curMem=0, maxMem=1111794647
+15/11/14 03:03:47 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 44.6 KB, free 1060.2 MB)
+15/11/14 03:03:47 INFO MemoryStore: ensureFreeSpace(4251) called with curMem=45712, maxMem=1111794647
+15/11/14 03:03:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.2 KB, free 1060.2 MB)
+15/11/14 03:03:47 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:35937 (size: 4.2 KB, free: 1060.3 MB)
+15/11/14 03:03:47 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:-2
+15/11/14 03:03:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/11/14 03:03:47 WARN LoadSnappy: Snappy native library not loaded
+15/11/14 03:03:47 INFO FileInputFormat: Total input paths to process : 1
+15/11/14 03:03:47 INFO SparkContext: Starting job: reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180
+15/11/14 03:03:47 INFO DAGScheduler: Got job 0 (reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180) with 2 output partitions
+15/11/14 03:03:47 INFO DAGScheduler: Final stage: ResultStage 0(reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180)
+15/11/14 03:03:47 INFO DAGScheduler: Parents of final stage: List()
+15/11/14 03:03:47 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:03:47 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[2] at reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180), which has no missing parents
+15/11/14 03:03:47 INFO MemoryStore: ensureFreeSpace(6176) called with curMem=49963, maxMem=1111794647
+15/11/14 03:03:47 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.0 KB, free 1060.2 MB)
+15/11/14 03:03:47 INFO MemoryStore: ensureFreeSpace(3846) called with curMem=56139, maxMem=1111794647
+15/11/14 03:03:47 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.8 KB, free 1060.2 MB)
+15/11/14 03:03:47 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:35937 (size: 3.8 KB, free: 1060.3 MB)
+15/11/14 03:03:47 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+15/11/14 03:03:47 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (PythonRDD[2] at reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180)
+15/11/14 03:03:47 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+15/11/14 03:03:48 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:03:48 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:03:48 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+15/11/14 03:03:48 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+15/11/14 03:03:48 INFO Executor: Fetching file:/afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py with timestamp 1447488226243
+15/11/14 03:03:48 INFO Utils: /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py has been previously copied to /tmp/spark-2a4975c3-d2ec-4faa-aebf-c896f50dd7a5/userFiles-f94b2abb-44c7-42f9-a299-79dfcd3743e2/dsgd_mf.py
+15/11/14 03:03:48 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:12322166+12322166
+15/11/14 03:03:48 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:0+12322166
+15/11/14 03:03:53 INFO PythonRunner: Times: total = 5811, boot = 415, init = 99, finish = 5297
+15/11/14 03:03:54 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2125 bytes result sent to driver
+15/11/14 03:03:54 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6004 ms on localhost (1/2)
+15/11/14 03:03:54 INFO PythonRunner: Times: total = 6247, boot = 419, init = 90, finish = 5738
+15/11/14 03:03:54 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2125 bytes result sent to driver
+15/11/14 03:03:54 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 6380 ms on localhost (2/2)
+15/11/14 03:03:54 INFO DAGScheduler: ResultStage 0 (reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180) finished in 6.428 s
+15/11/14 03:03:54 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+15/11/14 03:03:54 INFO DAGScheduler: Job 0 finished: reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:180, took 6.526748 s
+15/11/14 03:03:54 INFO SparkContext: Starting job: reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181
+15/11/14 03:03:54 INFO DAGScheduler: Got job 1 (reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181) with 2 output partitions
+15/11/14 03:03:54 INFO DAGScheduler: Final stage: ResultStage 1(reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181)
+15/11/14 03:03:54 INFO DAGScheduler: Parents of final stage: List()
+15/11/14 03:03:54 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:03:54 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[3] at reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181), which has no missing parents
+15/11/14 03:03:54 INFO MemoryStore: ensureFreeSpace(6176) called with curMem=59985, maxMem=1111794647
+15/11/14 03:03:54 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.0 KB, free 1060.2 MB)
+15/11/14 03:03:54 INFO MemoryStore: ensureFreeSpace(3845) called with curMem=66161, maxMem=1111794647
+15/11/14 03:03:54 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.8 KB, free 1060.2 MB)
+15/11/14 03:03:54 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:35937 (size: 3.8 KB, free: 1060.3 MB)
+15/11/14 03:03:54 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+15/11/14 03:03:54 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (PythonRDD[3] at reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181)
+15/11/14 03:03:54 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+15/11/14 03:03:54 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:03:54 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:03:54 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+15/11/14 03:03:54 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+15/11/14 03:03:54 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:0+12322166
+15/11/14 03:03:54 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:12322166+12322166
+15/11/14 03:03:54 INFO BlockManagerInfo: Removed broadcast_1_piece0 on localhost:35937 in memory (size: 3.8 KB, free: 1060.3 MB)
+15/11/14 03:03:54 INFO ContextCleaner: Cleaned accumulator 2
+15/11/14 03:03:59 INFO PythonRunner: Times: total = 4917, boot = -72, init = 93, finish = 4896
+15/11/14 03:03:59 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2125 bytes result sent to driver
+15/11/14 03:03:59 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 4936 ms on localhost (1/2)
+15/11/14 03:03:59 INFO PythonRunner: Times: total = 5244, boot = -501, init = 524, finish = 5221
+15/11/14 03:03:59 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2125 bytes result sent to driver
+15/11/14 03:03:59 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 5263 ms on localhost (2/2)
+15/11/14 03:03:59 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+15/11/14 03:03:59 INFO DAGScheduler: ResultStage 1 (reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181) finished in 5.263 s
+15/11/14 03:03:59 INFO DAGScheduler: Job 1 finished: reduce at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:181, took 5.277882 s
+15/11/14 03:04:01 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191
+15/11/14 03:04:01 INFO DAGScheduler: Got job 2 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191) with 2 output partitions
+15/11/14 03:04:01 INFO DAGScheduler: Final stage: ResultStage 2(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191)
+15/11/14 03:04:01 INFO DAGScheduler: Parents of final stage: List()
+15/11/14 03:04:01 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:04:01 INFO DAGScheduler: Submitting ResultStage 2 (PythonRDD[4] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191), which has no missing parents
+15/11/14 03:04:01 INFO MemoryStore: ensureFreeSpace(5144) called with curMem=59984, maxMem=1111794647
+15/11/14 03:04:01 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 5.0 KB, free 1060.2 MB)
+15/11/14 03:04:01 INFO MemoryStore: ensureFreeSpace(3228) called with curMem=65128, maxMem=1111794647
+15/11/14 03:04:01 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.2 KB, free 1060.2 MB)
+15/11/14 03:04:01 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:35937 (size: 3.2 KB, free: 1060.3 MB)
+15/11/14 03:04:01 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+15/11/14 03:04:01 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 2 (PythonRDD[4] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191)
+15/11/14 03:04:01 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+15/11/14 03:04:01 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:04:01 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, PROCESS_LOCAL, 2230 bytes)
+15/11/14 03:04:01 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+15/11/14 03:04:01 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+15/11/14 03:04:01 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:12322166+12322166
+15/11/14 03:04:01 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:0+12322166
+15/11/14 03:04:01 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:35937 in memory (size: 3.8 KB, free: 1060.3 MB)
+15/11/14 03:04:01 INFO ContextCleaner: Cleaned accumulator 3
+15/11/14 03:04:05 INFO PythonRunner: Times: total = 4839, boot = -1309, init = 1315, finish = 4833
+15/11/14 03:04:05 INFO PythonRunner: Times: total = 4873, boot = -1635, init = 1641, finish = 4867
+15/11/14 03:04:06 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 9068027 bytes result sent to driver
+15/11/14 03:04:06 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 9139342 bytes result sent to driver
+15/11/14 03:04:06 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 5030 ms on localhost (1/2)
+15/11/14 03:04:06 INFO DAGScheduler: ResultStage 2 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191) finished in 5.056 s
+15/11/14 03:04:06 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 5054 ms on localhost (2/2)
+15/11/14 03:04:06 INFO DAGScheduler: Job 2 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:191, took 5.070665 s
+15/11/14 03:04:06 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(288) called with curMem=58335, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 288.0 B, free 1060.2 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(93) called with curMem=58623, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 93.0 B, free 1060.2 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:35937 (size: 93.0 B, free: 1060.3 MB)
+15/11/14 03:04:07 INFO SparkContext: Created broadcast 4 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(288) called with curMem=58716, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 288.0 B, free 1060.2 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(93) called with curMem=59004, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 93.0 B, free 1060.2 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:35937 (size: 93.0 B, free: 1060.3 MB)
+15/11/14 03:04:07 INFO SparkContext: Created broadcast 5 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(288) called with curMem=59097, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 288.0 B, free 1060.2 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=59385, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1056.2 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1056.3 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(3276034) called with curMem=4253689, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_6_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1053.1 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_6_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1053.2 MB)
+15/11/14 03:04:07 INFO SparkContext: Created broadcast 6 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(288) called with curMem=7529723, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 288.0 B, free 1053.1 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(887863) called with curMem=7530011, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 867.1 KB, free 1052.3 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 1052.3 MB)
+15/11/14 03:04:07 INFO SparkContext: Created broadcast 7 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:07 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:04:07 INFO DAGScheduler: Registering RDD 6 (partitionBy at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:215)
+15/11/14 03:04:07 INFO DAGScheduler: Got job 3 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:04:07 INFO DAGScheduler: Final stage: ResultStage 4(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:07 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+15/11/14 03:04:07 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+15/11/14 03:04:07 INFO DAGScheduler: Submitting ShuffleMapStage 3 (PairwiseRDD[6] at partitionBy at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:215), which has no missing parents
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(8016) called with curMem=8417874, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 7.8 KB, free 1052.3 MB)
+15/11/14 03:04:07 INFO MemoryStore: ensureFreeSpace(5111) called with curMem=8425890, maxMem=1111794647
+15/11/14 03:04:07 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 5.0 KB, free 1052.2 MB)
+15/11/14 03:04:07 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:35937 (size: 5.0 KB, free: 1052.3 MB)
+15/11/14 03:04:07 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:861
+15/11/14 03:04:07 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (PairwiseRDD[6] at partitionBy at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:215)
+15/11/14 03:04:07 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+15/11/14 03:04:07 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6, localhost, PROCESS_LOCAL, 2219 bytes)
+15/11/14 03:04:07 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7, localhost, PROCESS_LOCAL, 2219 bytes)
+15/11/14 03:04:07 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+15/11/14 03:04:07 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+15/11/14 03:04:07 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:12322166+12322166
+15/11/14 03:04:07 INFO HadoopRDD: Input split: file:/afs/cs.cmu.edu/project/bigML/RCV1-MF/RCV1.small_train.csv:0+12322166
+15/11/14 03:04:13 INFO BlockManagerInfo: Removed broadcast_3_piece0 on localhost:35937 in memory (size: 3.2 KB, free: 1052.3 MB)
+15/11/14 03:04:13 INFO ContextCleaner: Cleaned accumulator 4
+15/11/14 03:04:15 INFO PythonRunner: Times: total = 7813, boot = -1803, init = 1808, finish = 7808
+15/11/14 03:04:15 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 2319 bytes result sent to driver
+15/11/14 03:04:15 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 7864 ms on localhost (1/2)
+15/11/14 03:04:16 INFO PythonRunner: Times: total = 8661, boot = -1768, init = 1774, finish = 8655
+15/11/14 03:04:16 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 2319 bytes result sent to driver
+15/11/14 03:04:16 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 8705 ms on localhost (2/2)
+15/11/14 03:04:16 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+15/11/14 03:04:16 INFO DAGScheduler: ShuffleMapStage 3 (partitionBy at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:215) finished in 8.706 s
+15/11/14 03:04:16 INFO DAGScheduler: looking for newly runnable stages
+15/11/14 03:04:16 INFO DAGScheduler: running: Set()
+15/11/14 03:04:16 INFO DAGScheduler: waiting: Set(ResultStage 4)
+15/11/14 03:04:16 INFO DAGScheduler: failed: Set()
+15/11/14 03:04:16 INFO DAGScheduler: Missing parents for ResultStage 4: List()
+15/11/14 03:04:16 INFO DAGScheduler: Submitting ResultStage 4 (PythonRDD[10] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which is now runnable
+15/11/14 03:04:16 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=8422629, maxMem=1111794647
+15/11/14 03:04:16 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 8.3 KB, free 1052.2 MB)
+15/11/14 03:04:16 INFO MemoryStore: ensureFreeSpace(5200) called with curMem=8431109, maxMem=1111794647
+15/11/14 03:04:16 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1052.2 MB)
+15/11/14 03:04:16 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1052.3 MB)
+15/11/14 03:04:16 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:861
+15/11/14 03:04:16 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 4 (PythonRDD[10] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:16 INFO TaskSchedulerImpl: Adding task set 4.0 with 3 tasks
+15/11/14 03:04:16 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:16 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:16 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 10, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:16 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+15/11/14 03:04:16 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+15/11/14 03:04:16 INFO Executor: Running task 2.0 in stage 4.0 (TID 10)
+15/11/14 03:04:16 INFO CacheManager: Partition rdd_9_1 not found, computing it
+15/11/14 03:04:16 INFO CacheManager: Partition rdd_9_0 not found, computing it
+15/11/14 03:04:16 INFO CacheManager: Partition rdd_9_2 not found, computing it
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+15/11/14 03:04:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+15/11/14 03:04:16 INFO PythonRunner: Times: total = 88, boot = 3, init = 6, finish = 79
+15/11/14 03:04:16 INFO MemoryStore: ensureFreeSpace(254881) called with curMem=8436309, maxMem=1111794647
+15/11/14 03:04:16 INFO MemoryStore: Block rdd_9_2 stored as bytes in memory (estimated size 248.9 KB, free 1052.0 MB)
+15/11/14 03:04:16 INFO BlockManagerInfo: Added rdd_9_2 in memory on localhost:35937 (size: 248.9 KB, free: 1052.1 MB)
+15/11/14 03:04:16 INFO PythonRunner: Times: total = 154, boot = -942, init = 951, finish = 145
+15/11/14 03:04:16 INFO MemoryStore: ensureFreeSpace(543658) called with curMem=8691190, maxMem=1111794647
+15/11/14 03:04:16 INFO MemoryStore: Block rdd_9_1 stored as bytes in memory (estimated size 530.9 KB, free 1051.5 MB)
+15/11/14 03:04:16 INFO BlockManagerInfo: Added rdd_9_1 in memory on localhost:35937 (size: 530.9 KB, free: 1051.5 MB)
+15/11/14 03:04:17 INFO PythonRunner: Times: total = 1037, boot = -1, init = 5, finish = 1033
+15/11/14 03:04:17 INFO Executor: Finished task 2.0 in stage 4.0 (TID 10). 2785882 bytes result sent to driver
+15/11/14 03:04:17 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 10) in 1206 ms on localhost (1/3)
+15/11/14 03:04:17 INFO PythonRunner: Times: total = 1206, boot = -10, init = 13, finish = 1203
+15/11/14 03:04:17 INFO Executor: Finished task 1.0 in stage 4.0 (TID 9). 2786122 bytes result sent to driver
+15/11/14 03:04:17 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 9) in 1449 ms on localhost (2/3)
+15/11/14 03:04:18 INFO PythonRunner: Times: total = 2467, boot = -87, init = 95, finish = 2459
+15/11/14 03:04:19 INFO MemoryStore: ensureFreeSpace(11779877) called with curMem=9234848, maxMem=1111794647
+15/11/14 03:04:19 INFO MemoryStore: Block rdd_9_0 stored as bytes in memory (estimated size 11.2 MB, free 1040.2 MB)
+15/11/14 03:04:19 INFO BlockManagerInfo: Added rdd_9_0 in memory on localhost:35937 (size: 11.2 MB, free: 1040.3 MB)
+15/11/14 03:04:34 INFO PythonRunner: Times: total = 15013, boot = -1474, init = 1475, finish = 15012
+15/11/14 03:04:34 INFO Executor: Finished task 0.0 in stage 4.0 (TID 8). 2786124 bytes result sent to driver
+15/11/14 03:04:34 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 8) in 17716 ms on localhost (3/3)
+15/11/14 03:04:34 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+15/11/14 03:04:34 INFO DAGScheduler: ResultStage 4 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 17.717 s
+15/11/14 03:04:34 INFO DAGScheduler: Job 3 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 26.477648 s
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(288) called with curMem=21014725, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 288.0 B, free 1040.2 MB)
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=21015013, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1036.2 MB)
+15/11/14 03:04:34 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1036.3 MB)
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(3276119) called with curMem=25209317, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_10_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1033.1 MB)
+15/11/14 03:04:34 INFO BlockManagerInfo: Added broadcast_10_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1033.2 MB)
+15/11/14 03:04:34 INFO SparkContext: Created broadcast 10 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(288) called with curMem=28485436, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 288.0 B, free 1033.1 MB)
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(887856) called with curMem=28485724, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 867.0 KB, free 1032.3 MB)
+15/11/14 03:04:34 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 1032.3 MB)
+15/11/14 03:04:34 INFO SparkContext: Created broadcast 11 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:34 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:04:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 157 bytes
+15/11/14 03:04:34 INFO DAGScheduler: Got job 4 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:04:34 INFO DAGScheduler: Final stage: ResultStage 6(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:34 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+15/11/14 03:04:34 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:04:34 INFO DAGScheduler: Submitting ResultStage 6 (PythonRDD[11] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=29373580, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 8.3 KB, free 1032.3 MB)
+15/11/14 03:04:34 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=29382060, maxMem=1111794647
+15/11/14 03:04:34 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1032.3 MB)
+15/11/14 03:04:34 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1032.3 MB)
+15/11/14 03:04:34 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:861
+15/11/14 03:04:34 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 6 (PythonRDD[11] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:34 INFO TaskSchedulerImpl: Adding task set 6.0 with 3 tasks
+15/11/14 03:04:34 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 11, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:34 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 12, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:34 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 13, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:34 INFO Executor: Running task 0.0 in stage 6.0 (TID 11)
+15/11/14 03:04:34 INFO Executor: Running task 1.0 in stage 6.0 (TID 12)
+15/11/14 03:04:34 INFO Executor: Running task 2.0 in stage 6.0 (TID 13)
+15/11/14 03:04:34 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:04:34 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:04:34 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:04:34 INFO PythonRunner: Times: total = 26, boot = -16428, init = 16432, finish = 22
+15/11/14 03:04:34 INFO Executor: Finished task 2.0 in stage 6.0 (TID 13). 2092 bytes result sent to driver
+15/11/14 03:04:34 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 13) in 45 ms on localhost (1/3)
+15/11/14 03:04:35 INFO PythonRunner: Times: total = 990, boot = -155, init = 163, finish = 982
+15/11/14 03:04:35 INFO Executor: Finished task 1.0 in stage 6.0 (TID 12). 2786421 bytes result sent to driver
+15/11/14 03:04:35 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 12) in 1024 ms on localhost (2/3)
+15/11/14 03:04:47 INFO PythonRunner: Times: total = 13317, boot = -15331, init = 15358, finish = 13290
+15/11/14 03:04:47 INFO Executor: Finished task 0.0 in stage 6.0 (TID 11). 2786423 bytes result sent to driver
+15/11/14 03:04:47 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 11) in 13358 ms on localhost (3/3)
+15/11/14 03:04:47 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+15/11/14 03:04:47 INFO DAGScheduler: ResultStage 6 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.360 s
+15/11/14 03:04:47 INFO DAGScheduler: Job 4 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.394058 s
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(288) called with curMem=29387265, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 288.0 B, free 1032.3 MB)
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=29387553, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1028.3 MB)
+15/11/14 03:04:47 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1028.3 MB)
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(3276187) called with curMem=33581857, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_13_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1025.1 MB)
+15/11/14 03:04:47 INFO BlockManagerInfo: Added broadcast_13_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1025.2 MB)
+15/11/14 03:04:47 INFO SparkContext: Created broadcast 13 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(288) called with curMem=36858044, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 288.0 B, free 1025.1 MB)
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(887839) called with curMem=36858332, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 867.0 KB, free 1024.3 MB)
+15/11/14 03:04:47 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 1024.4 MB)
+15/11/14 03:04:47 INFO SparkContext: Created broadcast 14 from broadcast at PythonRDD.scala:430
+15/11/14 03:04:47 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:04:47 INFO DAGScheduler: Got job 5 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:04:47 INFO DAGScheduler: Final stage: ResultStage 8(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:47 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+15/11/14 03:04:47 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:04:47 INFO DAGScheduler: Submitting ResultStage 8 (PythonRDD[12] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=37746171, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 8.3 KB, free 1024.3 MB)
+15/11/14 03:04:47 INFO MemoryStore: ensureFreeSpace(5207) called with curMem=37754651, maxMem=1111794647
+15/11/14 03:04:47 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1024.3 MB)
+15/11/14 03:04:47 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1024.4 MB)
+15/11/14 03:04:47 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:861
+15/11/14 03:04:47 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 8 (PythonRDD[12] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:04:47 INFO TaskSchedulerImpl: Adding task set 8.0 with 3 tasks
+15/11/14 03:04:47 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 14, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:47 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 15, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:47 INFO TaskSetManager: Starting task 2.0 in stage 8.0 (TID 16, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:04:47 INFO Executor: Running task 0.0 in stage 8.0 (TID 14)
+15/11/14 03:04:47 INFO Executor: Running task 1.0 in stage 8.0 (TID 15)
+15/11/14 03:04:47 INFO Executor: Running task 2.0 in stage 8.0 (TID 16)
+15/11/14 03:04:47 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:04:47 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:04:47 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:04:48 INFO PythonRunner: Times: total = 750, boot = -165, init = 171, finish = 744
+15/11/14 03:04:48 INFO Executor: Finished task 2.0 in stage 8.0 (TID 16). 2786181 bytes result sent to driver
+15/11/14 03:04:48 INFO TaskSetManager: Finished task 2.0 in stage 8.0 (TID 16) in 782 ms on localhost (1/3)
+15/11/14 03:04:49 INFO PythonRunner: Times: total = 1219, boot = -12500, init = 12507, finish = 1212
+15/11/14 03:04:49 INFO Executor: Finished task 1.0 in stage 8.0 (TID 15). 2786421 bytes result sent to driver
+15/11/14 03:04:49 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 15) in 1249 ms on localhost (2/3)
+15/11/14 03:05:02 INFO PythonRunner: Times: total = 15028, boot = -13459, init = 13483, finish = 15004
+15/11/14 03:05:02 INFO Executor: Finished task 0.0 in stage 8.0 (TID 14). 2786423 bytes result sent to driver
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_12_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1024.4 MB)
+15/11/14 03:05:02 INFO ContextCleaner: Cleaned accumulator 7
+15/11/14 03:05:02 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 14) in 15088 ms on localhost (3/3)
+15/11/14 03:05:02 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+15/11/14 03:05:02 INFO DAGScheduler: ResultStage 8 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 15.089 s
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_11_piece0 on localhost:35937 in memory (size: 867.0 KB, free: 1025.2 MB)
+15/11/14 03:05:02 INFO DAGScheduler: Job 5 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 15.109141 s
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_10_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 1028.3 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_10_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 1032.3 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_9_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1032.3 MB)
+15/11/14 03:05:02 INFO ContextCleaner: Cleaned accumulator 6
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_8_piece0 on localhost:35937 in memory (size: 5.0 KB, free: 1032.3 MB)
+15/11/14 03:05:02 INFO ContextCleaner: Cleaned accumulator 5
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_7_piece0 on localhost:35937 in memory (size: 867.1 KB, free: 1033.2 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_6_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 1037.2 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Removed broadcast_6_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 1040.3 MB)
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(288) called with curMem=21001734, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 288.0 B, free 1040.3 MB)
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=21002022, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1036.3 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1036.3 MB)
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(3276141) called with curMem=25196326, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_16_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1033.1 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Added broadcast_16_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1033.2 MB)
+15/11/14 03:05:02 INFO SparkContext: Created broadcast 16 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(288) called with curMem=28472467, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 288.0 B, free 1033.1 MB)
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(887896) called with curMem=28472755, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 867.1 KB, free 1032.3 MB)
+15/11/14 03:05:02 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 1032.3 MB)
+15/11/14 03:05:02 INFO SparkContext: Created broadcast 17 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:02 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:05:02 INFO DAGScheduler: Got job 6 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:05:02 INFO DAGScheduler: Final stage: ResultStage 10(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:02 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+15/11/14 03:05:02 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:05:02 INFO DAGScheduler: Submitting ResultStage 10 (PythonRDD[13] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=29360651, maxMem=1111794647
+15/11/14 03:05:02 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 8.3 KB, free 1032.3 MB)
+15/11/14 03:05:02 INFO MemoryStore: ensureFreeSpace(5204) called with curMem=29369131, maxMem=1111794647
+15/11/14 03:05:03 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1032.3 MB)
+15/11/14 03:05:03 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1032.3 MB)
+15/11/14 03:05:03 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:861
+15/11/14 03:05:03 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 10 (PythonRDD[13] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:03 INFO TaskSchedulerImpl: Adding task set 10.0 with 3 tasks
+15/11/14 03:05:03 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 17, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:03 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 18, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:03 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 19, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:03 INFO Executor: Running task 0.0 in stage 10.0 (TID 17)
+15/11/14 03:05:03 INFO Executor: Running task 2.0 in stage 10.0 (TID 19)
+15/11/14 03:05:03 INFO Executor: Running task 1.0 in stage 10.0 (TID 18)
+15/11/14 03:05:03 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:05:03 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:05:03 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:05:04 INFO PythonRunner: Times: total = 1051, boot = -14463, init = 14468, finish = 1046
+15/11/14 03:05:04 INFO Executor: Finished task 2.0 in stage 10.0 (TID 19). 2786181 bytes result sent to driver
+15/11/14 03:05:04 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 19) in 1077 ms on localhost (1/3)
+15/11/14 03:05:04 INFO PythonRunner: Times: total = 1237, boot = -164, init = 170, finish = 1231
+15/11/14 03:05:04 INFO Executor: Finished task 1.0 in stage 10.0 (TID 18). 2786421 bytes result sent to driver
+15/11/14 03:05:04 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 18) in 1276 ms on localhost (2/3)
+15/11/14 03:05:20 INFO PythonRunner: Times: total = 17504, boot = -13986, init = 14011, finish = 17479
+15/11/14 03:05:20 INFO Executor: Finished task 0.0 in stage 10.0 (TID 17). 2786423 bytes result sent to driver
+15/11/14 03:05:20 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 17) in 17541 ms on localhost (3/3)
+15/11/14 03:05:20 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+15/11/14 03:05:20 INFO DAGScheduler: ResultStage 10 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 17.541 s
+15/11/14 03:05:20 INFO DAGScheduler: Job 6 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 17.562873 s
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(288) called with curMem=29374335, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 288.0 B, free 1032.3 MB)
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=29374623, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1028.3 MB)
+15/11/14 03:05:20 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1028.3 MB)
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(3276120) called with curMem=33568927, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_19_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1025.2 MB)
+15/11/14 03:05:20 INFO BlockManagerInfo: Added broadcast_19_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1025.2 MB)
+15/11/14 03:05:20 INFO SparkContext: Created broadcast 19 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(288) called with curMem=36845047, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 288.0 B, free 1025.2 MB)
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(887858) called with curMem=36845335, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 867.0 KB, free 1024.3 MB)
+15/11/14 03:05:20 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 1024.4 MB)
+15/11/14 03:05:20 INFO SparkContext: Created broadcast 20 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:20 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:05:20 INFO DAGScheduler: Got job 7 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:05:20 INFO DAGScheduler: Final stage: ResultStage 12(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:20 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+15/11/14 03:05:20 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:05:20 INFO DAGScheduler: Submitting ResultStage 12 (PythonRDD[14] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=37733193, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 8.3 KB, free 1024.3 MB)
+15/11/14 03:05:20 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=37741673, maxMem=1111794647
+15/11/14 03:05:20 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1024.3 MB)
+15/11/14 03:05:20 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1024.4 MB)
+15/11/14 03:05:20 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:861
+15/11/14 03:05:20 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 12 (PythonRDD[14] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:20 INFO TaskSchedulerImpl: Adding task set 12.0 with 3 tasks
+15/11/14 03:05:20 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 20, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:20 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 21, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:20 INFO TaskSetManager: Starting task 2.0 in stage 12.0 (TID 22, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:20 INFO Executor: Running task 2.0 in stage 12.0 (TID 22)
+15/11/14 03:05:20 INFO Executor: Running task 0.0 in stage 12.0 (TID 20)
+15/11/14 03:05:20 INFO Executor: Running task 1.0 in stage 12.0 (TID 21)
+15/11/14 03:05:20 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:05:20 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:05:20 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:05:20 INFO PythonRunner: Times: total = 27, boot = -150, init = 158, finish = 19
+15/11/14 03:05:20 INFO Executor: Finished task 2.0 in stage 12.0 (TID 22). 2092 bytes result sent to driver
+15/11/14 03:05:20 INFO TaskSetManager: Finished task 2.0 in stage 12.0 (TID 22) in 46 ms on localhost (1/3)
+15/11/14 03:05:21 INFO PythonRunner: Times: total = 851, boot = -16609, init = 16613, finish = 847
+15/11/14 03:05:21 INFO Executor: Finished task 1.0 in stage 12.0 (TID 21). 2786421 bytes result sent to driver
+15/11/14 03:05:21 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 21) in 881 ms on localhost (2/3)
+15/11/14 03:05:35 INFO PythonRunner: Times: total = 14900, boot = -16423, init = 16448, finish = 14875
+15/11/14 03:05:35 INFO Executor: Finished task 0.0 in stage 12.0 (TID 20). 2786423 bytes result sent to driver
+15/11/14 03:05:35 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 20) in 14936 ms on localhost (3/3)
+15/11/14 03:05:35 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+15/11/14 03:05:35 INFO DAGScheduler: ResultStage 12 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.937 s
+15/11/14 03:05:35 INFO DAGScheduler: Job 7 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.956323 s
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(288) called with curMem=37746878, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 288.0 B, free 1024.3 MB)
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=37747166, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1020.3 MB)
+15/11/14 03:05:35 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1020.4 MB)
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(3276116) called with curMem=41941470, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_22_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1017.2 MB)
+15/11/14 03:05:35 INFO BlockManagerInfo: Added broadcast_22_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1017.2 MB)
+15/11/14 03:05:35 INFO SparkContext: Created broadcast 22 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(288) called with curMem=45217586, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 288.0 B, free 1017.2 MB)
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(887869) called with curMem=45217874, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 867.1 KB, free 1016.3 MB)
+15/11/14 03:05:35 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 1016.4 MB)
+15/11/14 03:05:35 INFO SparkContext: Created broadcast 23 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:35 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:05:35 INFO DAGScheduler: Got job 8 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:05:35 INFO DAGScheduler: Final stage: ResultStage 14(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:35 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 13)
+15/11/14 03:05:35 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:05:35 INFO DAGScheduler: Submitting ResultStage 14 (PythonRDD[15] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=46105743, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 8.3 KB, free 1016.3 MB)
+15/11/14 03:05:35 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=46114223, maxMem=1111794647
+15/11/14 03:05:35 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1016.3 MB)
+15/11/14 03:05:35 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1016.4 MB)
+15/11/14 03:05:35 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:861
+15/11/14 03:05:35 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 14 (PythonRDD[15] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:35 INFO TaskSchedulerImpl: Adding task set 14.0 with 3 tasks
+15/11/14 03:05:35 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 23, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:35 INFO TaskSetManager: Starting task 1.0 in stage 14.0 (TID 24, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:35 INFO TaskSetManager: Starting task 2.0 in stage 14.0 (TID 25, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:35 INFO Executor: Running task 0.0 in stage 14.0 (TID 23)
+15/11/14 03:05:35 INFO Executor: Running task 1.0 in stage 14.0 (TID 24)
+15/11/14 03:05:35 INFO Executor: Running task 2.0 in stage 14.0 (TID 25)
+15/11/14 03:05:35 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:05:35 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:05:35 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:05:36 INFO PythonRunner: Times: total = 734, boot = -14204, init = 14210, finish = 728
+15/11/14 03:05:36 INFO Executor: Finished task 2.0 in stage 14.0 (TID 25). 2786181 bytes result sent to driver
+15/11/14 03:05:36 INFO TaskSetManager: Finished task 2.0 in stage 14.0 (TID 25) in 769 ms on localhost (1/3)
+15/11/14 03:05:36 INFO PythonRunner: Times: total = 1203, boot = -15023, init = 15028, finish = 1198
+15/11/14 03:05:36 INFO Executor: Finished task 1.0 in stage 14.0 (TID 24). 2786421 bytes result sent to driver
+15/11/14 03:05:36 INFO TaskSetManager: Finished task 1.0 in stage 14.0 (TID 24) in 1229 ms on localhost (2/3)
+15/11/14 03:05:51 INFO PythonRunner: Times: total = 15643, boot = -141, init = 163, finish = 15621
+15/11/14 03:05:51 INFO Executor: Finished task 0.0 in stage 14.0 (TID 23). 2786423 bytes result sent to driver
+15/11/14 03:05:51 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 23) in 15680 ms on localhost (3/3)
+15/11/14 03:05:51 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+15/11/14 03:05:51 INFO DAGScheduler: ResultStage 14 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 15.681 s
+15/11/14 03:05:51 INFO DAGScheduler: Job 8 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 15.699657 s
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(288) called with curMem=46119429, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 288.0 B, free 1016.3 MB)
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=46119717, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1012.3 MB)
+15/11/14 03:05:51 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1012.4 MB)
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(3276171) called with curMem=50314021, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_25_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1009.2 MB)
+15/11/14 03:05:51 INFO BlockManagerInfo: Added broadcast_25_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1009.3 MB)
+15/11/14 03:05:51 INFO SparkContext: Created broadcast 25 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(288) called with curMem=53590192, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 288.0 B, free 1009.2 MB)
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(887864) called with curMem=53590480, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 867.1 KB, free 1008.3 MB)
+15/11/14 03:05:51 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 1008.4 MB)
+15/11/14 03:05:51 INFO SparkContext: Created broadcast 26 from broadcast at PythonRDD.scala:430
+15/11/14 03:05:51 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:05:51 INFO DAGScheduler: Got job 9 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:05:51 INFO DAGScheduler: Final stage: ResultStage 16(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:51 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 15)
+15/11/14 03:05:51 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:05:51 INFO DAGScheduler: Submitting ResultStage 16 (PythonRDD[16] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=54478344, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 8.3 KB, free 1008.3 MB)
+15/11/14 03:05:51 INFO MemoryStore: ensureFreeSpace(5207) called with curMem=54486824, maxMem=1111794647
+15/11/14 03:05:51 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1008.3 MB)
+15/11/14 03:05:51 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1008.4 MB)
+15/11/14 03:05:51 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:861
+15/11/14 03:05:51 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 16 (PythonRDD[16] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:05:51 INFO TaskSchedulerImpl: Adding task set 16.0 with 3 tasks
+15/11/14 03:05:51 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 26, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:51 INFO TaskSetManager: Starting task 1.0 in stage 16.0 (TID 27, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:51 INFO TaskSetManager: Starting task 2.0 in stage 16.0 (TID 28, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:05:51 INFO Executor: Running task 1.0 in stage 16.0 (TID 27)
+15/11/14 03:05:51 INFO Executor: Running task 2.0 in stage 16.0 (TID 28)
+15/11/14 03:05:51 INFO Executor: Running task 0.0 in stage 16.0 (TID 26)
+15/11/14 03:05:51 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:05:51 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:05:51 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:05:52 INFO PythonRunner: Times: total = 1082, boot = -142, init = 148, finish = 1076
+15/11/14 03:05:52 INFO Executor: Finished task 2.0 in stage 16.0 (TID 28). 2786181 bytes result sent to driver
+15/11/14 03:05:52 INFO TaskSetManager: Finished task 2.0 in stage 16.0 (TID 28) in 1112 ms on localhost (1/3)
+15/11/14 03:05:52 INFO PythonRunner: Times: total = 1230, boot = -15063, init = 15068, finish = 1225
+15/11/14 03:05:52 INFO Executor: Finished task 1.0 in stage 16.0 (TID 27). 2786421 bytes result sent to driver
+15/11/14 03:05:52 INFO TaskSetManager: Finished task 1.0 in stage 16.0 (TID 27) in 1256 ms on localhost (2/3)
+15/11/14 03:06:06 INFO PythonRunner: Times: total = 15309, boot = -14590, init = 14615, finish = 15284
+15/11/14 03:06:06 INFO ContextCleaner: Cleaned accumulator 10
+15/11/14 03:06:06 INFO Executor: Finished task 0.0 in stage 16.0 (TID 26). 2786423 bytes result sent to driver
+15/11/14 03:06:06 INFO BlockManagerInfo: Removed broadcast_15_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1008.4 MB)
+15/11/14 03:06:06 INFO ContextCleaner: Cleaned accumulator 8
+15/11/14 03:06:06 INFO BlockManagerInfo: Removed broadcast_18_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1008.4 MB)
+15/11/14 03:06:06 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 26) in 15374 ms on localhost (3/3)
+15/11/14 03:06:06 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+15/11/14 03:06:06 INFO DAGScheduler: ResultStage 16 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 15.375 s
+15/11/14 03:06:06 INFO ContextCleaner: Cleaned accumulator 9
+15/11/14 03:06:06 INFO DAGScheduler: Job 9 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 15.394926 s
+15/11/14 03:06:06 INFO BlockManagerInfo: Removed broadcast_21_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1008.4 MB)
+15/11/14 03:06:06 INFO BlockManagerInfo: Removed broadcast_24_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 1008.4 MB)
+15/11/14 03:06:06 INFO ContextCleaner: Cleaned accumulator 11
+15/11/14 03:06:06 INFO MemoryStore: ensureFreeSpace(288) called with curMem=54437289, maxMem=1111794647
+15/11/14 03:06:06 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 288.0 B, free 1008.4 MB)
+15/11/14 03:06:06 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=54437577, maxMem=1111794647
+15/11/14 03:06:06 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 4.0 MB, free 1004.4 MB)
+15/11/14 03:06:06 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 1004.4 MB)
+15/11/14 03:06:06 INFO MemoryStore: ensureFreeSpace(3276151) called with curMem=58631881, maxMem=1111794647
+15/11/14 03:06:06 INFO MemoryStore: Block broadcast_28_piece1 stored as bytes in memory (estimated size 3.1 MB, free 1001.2 MB)
+15/11/14 03:06:06 INFO BlockManagerInfo: Added broadcast_28_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 1001.3 MB)
+15/11/14 03:06:06 INFO SparkContext: Created broadcast 28 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:06 INFO MemoryStore: ensureFreeSpace(288) called with curMem=61908032, maxMem=1111794647
+15/11/14 03:06:06 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 288.0 B, free 1001.2 MB)
+15/11/14 03:06:06 INFO MemoryStore: ensureFreeSpace(887857) called with curMem=61908320, maxMem=1111794647
+15/11/14 03:06:06 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 867.0 KB, free 1000.4 MB)
+15/11/14 03:06:06 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 1000.5 MB)
+15/11/14 03:06:06 INFO SparkContext: Created broadcast 29 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:07 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:06:07 INFO DAGScheduler: Got job 10 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:06:07 INFO DAGScheduler: Final stage: ResultStage 18(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:07 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 17)
+15/11/14 03:06:07 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:06:07 INFO DAGScheduler: Submitting ResultStage 18 (PythonRDD[17] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:06:07 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=62796177, maxMem=1111794647
+15/11/14 03:06:07 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 8.3 KB, free 1000.4 MB)
+15/11/14 03:06:07 INFO MemoryStore: ensureFreeSpace(5207) called with curMem=62804657, maxMem=1111794647
+15/11/14 03:06:07 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 5.1 KB, free 1000.4 MB)
+15/11/14 03:06:07 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 1000.5 MB)
+15/11/14 03:06:07 INFO SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:861
+15/11/14 03:06:07 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 18 (PythonRDD[17] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:07 INFO TaskSchedulerImpl: Adding task set 18.0 with 3 tasks
+15/11/14 03:06:07 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 29, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:07 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 30, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:07 INFO TaskSetManager: Starting task 2.0 in stage 18.0 (TID 31, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:07 INFO Executor: Running task 0.0 in stage 18.0 (TID 29)
+15/11/14 03:06:07 INFO Executor: Running task 1.0 in stage 18.0 (TID 30)
+15/11/14 03:06:07 INFO Executor: Running task 2.0 in stage 18.0 (TID 31)
+15/11/14 03:06:07 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:06:07 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:06:07 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:06:07 INFO PythonRunner: Times: total = 24, boot = -14260, init = 14267, finish = 17
+15/11/14 03:06:07 INFO Executor: Finished task 2.0 in stage 18.0 (TID 31). 2092 bytes result sent to driver
+15/11/14 03:06:07 INFO TaskSetManager: Finished task 2.0 in stage 18.0 (TID 31) in 38 ms on localhost (1/3)
+15/11/14 03:06:07 INFO PythonRunner: Times: total = 909, boot = -156, init = 162, finish = 903
+15/11/14 03:06:07 INFO Executor: Finished task 1.0 in stage 18.0 (TID 30). 2786421 bytes result sent to driver
+15/11/14 03:06:07 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 30) in 940 ms on localhost (2/3)
+15/11/14 03:06:21 INFO PythonRunner: Times: total = 14606, boot = -14395, init = 14416, finish = 14585
+15/11/14 03:06:21 INFO Executor: Finished task 0.0 in stage 18.0 (TID 29). 2786423 bytes result sent to driver
+15/11/14 03:06:21 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 29) in 14639 ms on localhost (3/3)
+15/11/14 03:06:21 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+15/11/14 03:06:21 INFO DAGScheduler: ResultStage 18 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.640 s
+15/11/14 03:06:21 INFO DAGScheduler: Job 10 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.659395 s
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(288) called with curMem=62809864, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 288.0 B, free 1000.4 MB)
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=62810152, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 4.0 MB, free 996.4 MB)
+15/11/14 03:06:21 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 996.5 MB)
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(3276081) called with curMem=67004456, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_31_piece1 stored as bytes in memory (estimated size 3.1 MB, free 993.3 MB)
+15/11/14 03:06:21 INFO BlockManagerInfo: Added broadcast_31_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 993.3 MB)
+15/11/14 03:06:21 INFO SparkContext: Created broadcast 31 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(288) called with curMem=70280537, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_32 stored as values in memory (estimated size 288.0 B, free 993.3 MB)
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(887832) called with curMem=70280825, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_32_piece0 stored as bytes in memory (estimated size 867.0 KB, free 992.4 MB)
+15/11/14 03:06:21 INFO BlockManagerInfo: Added broadcast_32_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 992.5 MB)
+15/11/14 03:06:21 INFO SparkContext: Created broadcast 32 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:21 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:06:21 INFO DAGScheduler: Got job 11 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:06:21 INFO DAGScheduler: Final stage: ResultStage 20(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:21 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 19)
+15/11/14 03:06:21 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:06:21 INFO DAGScheduler: Submitting ResultStage 20 (PythonRDD[18] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=71168657, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_33 stored as values in memory (estimated size 8.3 KB, free 992.4 MB)
+15/11/14 03:06:21 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=71177137, maxMem=1111794647
+15/11/14 03:06:21 INFO MemoryStore: Block broadcast_33_piece0 stored as bytes in memory (estimated size 5.1 KB, free 992.4 MB)
+15/11/14 03:06:21 INFO BlockManagerInfo: Added broadcast_33_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 992.5 MB)
+15/11/14 03:06:21 INFO SparkContext: Created broadcast 33 from broadcast at DAGScheduler.scala:861
+15/11/14 03:06:21 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 20 (PythonRDD[18] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:21 INFO TaskSchedulerImpl: Adding task set 20.0 with 3 tasks
+15/11/14 03:06:21 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 32, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:21 INFO TaskSetManager: Starting task 1.0 in stage 20.0 (TID 33, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:21 INFO TaskSetManager: Starting task 2.0 in stage 20.0 (TID 34, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:21 INFO Executor: Running task 0.0 in stage 20.0 (TID 32)
+15/11/14 03:06:21 INFO Executor: Running task 2.0 in stage 20.0 (TID 34)
+15/11/14 03:06:21 INFO Executor: Running task 1.0 in stage 20.0 (TID 33)
+15/11/14 03:06:21 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:06:21 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:06:21 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:06:22 INFO PythonRunner: Times: total = 714, boot = -14728, init = 14732, finish = 710
+15/11/14 03:06:22 INFO Executor: Finished task 2.0 in stage 20.0 (TID 34). 2786181 bytes result sent to driver
+15/11/14 03:06:22 INFO TaskSetManager: Finished task 2.0 in stage 20.0 (TID 34) in 742 ms on localhost (1/3)
+15/11/14 03:06:23 INFO PythonRunner: Times: total = 1381, boot = -140, init = 146, finish = 1375
+15/11/14 03:06:23 INFO Executor: Finished task 1.0 in stage 20.0 (TID 33). 2786421 bytes result sent to driver
+15/11/14 03:06:23 INFO TaskSetManager: Finished task 1.0 in stage 20.0 (TID 33) in 1411 ms on localhost (2/3)
+15/11/14 03:06:36 INFO PythonRunner: Times: total = 14674, boot = -13843, init = 13866, finish = 14651
+15/11/14 03:06:36 INFO Executor: Finished task 0.0 in stage 20.0 (TID 32). 2786423 bytes result sent to driver
+15/11/14 03:06:36 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 32) in 14707 ms on localhost (3/3)
+15/11/14 03:06:36 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+15/11/14 03:06:36 INFO DAGScheduler: ResultStage 20 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.708 s
+15/11/14 03:06:36 INFO DAGScheduler: Job 11 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.725334 s
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(288) called with curMem=71182343, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_34 stored as values in memory (estimated size 288.0 B, free 992.4 MB)
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=71182631, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_34_piece0 stored as bytes in memory (estimated size 4.0 MB, free 988.4 MB)
+15/11/14 03:06:36 INFO BlockManagerInfo: Added broadcast_34_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 988.5 MB)
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(3276032) called with curMem=75376935, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_34_piece1 stored as bytes in memory (estimated size 3.1 MB, free 985.3 MB)
+15/11/14 03:06:36 INFO BlockManagerInfo: Added broadcast_34_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 985.4 MB)
+15/11/14 03:06:36 INFO SparkContext: Created broadcast 34 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(288) called with curMem=78652967, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_35 stored as values in memory (estimated size 288.0 B, free 985.3 MB)
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(887852) called with curMem=78653255, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_35_piece0 stored as bytes in memory (estimated size 867.0 KB, free 984.4 MB)
+15/11/14 03:06:36 INFO BlockManagerInfo: Added broadcast_35_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 984.5 MB)
+15/11/14 03:06:36 INFO SparkContext: Created broadcast 35 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:36 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:06:36 INFO DAGScheduler: Got job 12 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:06:36 INFO DAGScheduler: Final stage: ResultStage 22(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:36 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 21)
+15/11/14 03:06:36 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:06:36 INFO DAGScheduler: Submitting ResultStage 22 (PythonRDD[19] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=79541107, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_36 stored as values in memory (estimated size 8.3 KB, free 984.4 MB)
+15/11/14 03:06:36 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=79549587, maxMem=1111794647
+15/11/14 03:06:36 INFO MemoryStore: Block broadcast_36_piece0 stored as bytes in memory (estimated size 5.1 KB, free 984.4 MB)
+15/11/14 03:06:36 INFO BlockManagerInfo: Added broadcast_36_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 984.5 MB)
+15/11/14 03:06:36 INFO SparkContext: Created broadcast 36 from broadcast at DAGScheduler.scala:861
+15/11/14 03:06:36 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 22 (PythonRDD[19] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:36 INFO TaskSchedulerImpl: Adding task set 22.0 with 3 tasks
+15/11/14 03:06:36 INFO TaskSetManager: Starting task 0.0 in stage 22.0 (TID 35, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:36 INFO TaskSetManager: Starting task 1.0 in stage 22.0 (TID 36, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:36 INFO TaskSetManager: Starting task 2.0 in stage 22.0 (TID 37, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:36 INFO Executor: Running task 1.0 in stage 22.0 (TID 36)
+15/11/14 03:06:36 INFO Executor: Running task 2.0 in stage 22.0 (TID 37)
+15/11/14 03:06:36 INFO Executor: Running task 0.0 in stage 22.0 (TID 35)
+15/11/14 03:06:36 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:06:36 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:06:36 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:06:37 INFO PythonRunner: Times: total = 877, boot = -13438, init = 13444, finish = 871
+15/11/14 03:06:37 INFO Executor: Finished task 2.0 in stage 22.0 (TID 37). 2786181 bytes result sent to driver
+15/11/14 03:06:37 INFO TaskSetManager: Finished task 2.0 in stage 22.0 (TID 37) in 903 ms on localhost (1/3)
+15/11/14 03:06:37 INFO PythonRunner: Times: total = 1179, boot = -134, init = 141, finish = 1172
+15/11/14 03:06:37 INFO Executor: Finished task 1.0 in stage 22.0 (TID 36). 2786421 bytes result sent to driver
+15/11/14 03:06:37 INFO TaskSetManager: Finished task 1.0 in stage 22.0 (TID 36) in 1204 ms on localhost (2/3)
+15/11/14 03:06:50 INFO PythonRunner: Times: total = 13861, boot = -14095, init = 14112, finish = 13844
+15/11/14 03:06:50 INFO Executor: Finished task 0.0 in stage 22.0 (TID 35). 2786423 bytes result sent to driver
+15/11/14 03:06:50 INFO TaskSetManager: Finished task 0.0 in stage 22.0 (TID 35) in 13888 ms on localhost (3/3)
+15/11/14 03:06:50 INFO TaskSchedulerImpl: Removed TaskSet 22.0, whose tasks have all completed, from pool 
+15/11/14 03:06:50 INFO DAGScheduler: ResultStage 22 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.889 s
+15/11/14 03:06:50 INFO DAGScheduler: Job 12 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.906580 s
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(288) called with curMem=79554793, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_37 stored as values in memory (estimated size 288.0 B, free 984.4 MB)
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=79555081, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_37_piece0 stored as bytes in memory (estimated size 4.0 MB, free 980.4 MB)
+15/11/14 03:06:50 INFO BlockManagerInfo: Added broadcast_37_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 980.5 MB)
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(3275976) called with curMem=83749385, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_37_piece1 stored as bytes in memory (estimated size 3.1 MB, free 977.3 MB)
+15/11/14 03:06:50 INFO BlockManagerInfo: Added broadcast_37_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 977.4 MB)
+15/11/14 03:06:50 INFO SparkContext: Created broadcast 37 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(288) called with curMem=87025361, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_38 stored as values in memory (estimated size 288.0 B, free 977.3 MB)
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(887882) called with curMem=87025649, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_38_piece0 stored as bytes in memory (estimated size 867.1 KB, free 976.4 MB)
+15/11/14 03:06:50 INFO BlockManagerInfo: Added broadcast_38_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 976.5 MB)
+15/11/14 03:06:50 INFO SparkContext: Created broadcast 38 from broadcast at PythonRDD.scala:430
+15/11/14 03:06:50 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:06:50 INFO DAGScheduler: Got job 13 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:06:50 INFO DAGScheduler: Final stage: ResultStage 24(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:50 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 23)
+15/11/14 03:06:50 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:06:50 INFO DAGScheduler: Submitting ResultStage 24 (PythonRDD[20] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=87913531, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_39 stored as values in memory (estimated size 8.3 KB, free 976.4 MB)
+15/11/14 03:06:50 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=87922011, maxMem=1111794647
+15/11/14 03:06:50 INFO MemoryStore: Block broadcast_39_piece0 stored as bytes in memory (estimated size 5.1 KB, free 976.4 MB)
+15/11/14 03:06:50 INFO BlockManagerInfo: Added broadcast_39_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 976.5 MB)
+15/11/14 03:06:50 INFO SparkContext: Created broadcast 39 from broadcast at DAGScheduler.scala:861
+15/11/14 03:06:50 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 24 (PythonRDD[20] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:06:50 INFO TaskSchedulerImpl: Adding task set 24.0 with 3 tasks
+15/11/14 03:06:50 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 38, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:50 INFO TaskSetManager: Starting task 1.0 in stage 24.0 (TID 39, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:50 INFO TaskSetManager: Starting task 2.0 in stage 24.0 (TID 40, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:06:50 INFO Executor: Running task 0.0 in stage 24.0 (TID 38)
+15/11/14 03:06:50 INFO Executor: Running task 1.0 in stage 24.0 (TID 39)
+15/11/14 03:06:50 INFO Executor: Running task 2.0 in stage 24.0 (TID 40)
+15/11/14 03:06:50 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:06:50 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:06:50 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:06:50 INFO PythonRunner: Times: total = 24, boot = -13126, init = 13130, finish = 20
+15/11/14 03:06:50 INFO Executor: Finished task 2.0 in stage 24.0 (TID 40). 2092 bytes result sent to driver
+15/11/14 03:06:50 INFO TaskSetManager: Finished task 2.0 in stage 24.0 (TID 40) in 36 ms on localhost (1/3)
+15/11/14 03:06:51 INFO PythonRunner: Times: total = 858, boot = -141, init = 145, finish = 854
+15/11/14 03:06:51 INFO Executor: Finished task 1.0 in stage 24.0 (TID 39). 2786421 bytes result sent to driver
+15/11/14 03:06:51 INFO TaskSetManager: Finished task 1.0 in stage 24.0 (TID 39) in 883 ms on localhost (2/3)
+15/11/14 03:07:06 INFO PythonRunner: Times: total = 16115, boot = -12825, init = 12847, finish = 16093
+15/11/14 03:07:06 INFO Executor: Finished task 0.0 in stage 24.0 (TID 38). 2786423 bytes result sent to driver
+15/11/14 03:07:06 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 38) in 16143 ms on localhost (3/3)
+15/11/14 03:07:06 INFO TaskSchedulerImpl: Removed TaskSet 24.0, whose tasks have all completed, from pool 
+15/11/14 03:07:06 INFO DAGScheduler: ResultStage 24 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 16.144 s
+15/11/14 03:07:06 INFO DAGScheduler: Job 13 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 16.162877 s
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(288) called with curMem=87927216, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_40 stored as values in memory (estimated size 288.0 B, free 976.4 MB)
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=87927504, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_40_piece0 stored as bytes in memory (estimated size 4.0 MB, free 972.4 MB)
+15/11/14 03:07:06 INFO BlockManagerInfo: Added broadcast_40_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 972.5 MB)
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(3276070) called with curMem=92116603, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_40_piece1 stored as bytes in memory (estimated size 3.1 MB, free 969.3 MB)
+15/11/14 03:07:06 INFO BlockManagerInfo: Removed broadcast_39_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 972.5 MB)
+15/11/14 03:07:06 INFO BlockManagerInfo: Added broadcast_40_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 969.4 MB)
+15/11/14 03:07:06 INFO ContextCleaner: Cleaned accumulator 16
+15/11/14 03:07:06 INFO SparkContext: Created broadcast 40 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:06 INFO BlockManagerInfo: Removed broadcast_27_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 969.4 MB)
+15/11/14 03:07:06 INFO ContextCleaner: Cleaned accumulator 12
+15/11/14 03:07:06 INFO BlockManagerInfo: Removed broadcast_30_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 969.4 MB)
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(288) called with curMem=95365299, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_41 stored as values in memory (estimated size 288.0 B, free 969.4 MB)
+15/11/14 03:07:06 INFO ContextCleaner: Cleaned accumulator 13
+15/11/14 03:07:06 INFO BlockManagerInfo: Removed broadcast_33_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 969.4 MB)
+15/11/14 03:07:06 INFO ContextCleaner: Cleaned accumulator 14
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(887900) called with curMem=95343421, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_41_piece0 stored as bytes in memory (estimated size 867.1 KB, free 968.5 MB)
+15/11/14 03:07:06 INFO BlockManagerInfo: Added broadcast_41_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 968.6 MB)
+15/11/14 03:07:06 INFO SparkContext: Created broadcast 41 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:06 INFO BlockManagerInfo: Removed broadcast_36_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 968.6 MB)
+15/11/14 03:07:06 INFO ContextCleaner: Cleaned accumulator 15
+15/11/14 03:07:06 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:07:06 INFO DAGScheduler: Got job 14 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:07:06 INFO DAGScheduler: Final stage: ResultStage 26(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:06 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 25)
+15/11/14 03:07:06 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:07:06 INFO DAGScheduler: Submitting ResultStage 26 (PythonRDD[21] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=96217635, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_42 stored as values in memory (estimated size 8.3 KB, free 968.5 MB)
+15/11/14 03:07:06 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=96226115, maxMem=1111794647
+15/11/14 03:07:06 INFO MemoryStore: Block broadcast_42_piece0 stored as bytes in memory (estimated size 5.1 KB, free 968.5 MB)
+15/11/14 03:07:06 INFO BlockManagerInfo: Added broadcast_42_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 968.6 MB)
+15/11/14 03:07:06 INFO SparkContext: Created broadcast 42 from broadcast at DAGScheduler.scala:861
+15/11/14 03:07:06 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 26 (PythonRDD[21] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:06 INFO TaskSchedulerImpl: Adding task set 26.0 with 3 tasks
+15/11/14 03:07:06 INFO TaskSetManager: Starting task 0.0 in stage 26.0 (TID 41, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:06 INFO TaskSetManager: Starting task 1.0 in stage 26.0 (TID 42, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:06 INFO TaskSetManager: Starting task 2.0 in stage 26.0 (TID 43, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:06 INFO Executor: Running task 1.0 in stage 26.0 (TID 42)
+15/11/14 03:07:06 INFO Executor: Running task 2.0 in stage 26.0 (TID 43)
+15/11/14 03:07:06 INFO Executor: Running task 0.0 in stage 26.0 (TID 41)
+15/11/14 03:07:06 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:07:06 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:07:06 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:07:07 INFO PythonRunner: Times: total = 740, boot = -164, init = 172, finish = 732
+15/11/14 03:07:07 INFO Executor: Finished task 2.0 in stage 26.0 (TID 43). 2786181 bytes result sent to driver
+15/11/14 03:07:07 INFO TaskSetManager: Finished task 2.0 in stage 26.0 (TID 43) in 766 ms on localhost (1/3)
+15/11/14 03:07:08 INFO PythonRunner: Times: total = 1062, boot = -16266, init = 16273, finish = 1055
+15/11/14 03:07:08 INFO Executor: Finished task 1.0 in stage 26.0 (TID 42). 2786421 bytes result sent to driver
+15/11/14 03:07:08 INFO TaskSetManager: Finished task 1.0 in stage 26.0 (TID 42) in 1092 ms on localhost (2/3)
+15/11/14 03:07:19 INFO PythonRunner: Times: total = 13025, boot = -15433, init = 15450, finish = 13008
+15/11/14 03:07:19 INFO Executor: Finished task 0.0 in stage 26.0 (TID 41). 2786423 bytes result sent to driver
+15/11/14 03:07:19 INFO TaskSetManager: Finished task 0.0 in stage 26.0 (TID 41) in 13054 ms on localhost (3/3)
+15/11/14 03:07:19 INFO TaskSchedulerImpl: Removed TaskSet 26.0, whose tasks have all completed, from pool 
+15/11/14 03:07:19 INFO DAGScheduler: ResultStage 26 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.055 s
+15/11/14 03:07:19 INFO DAGScheduler: Job 14 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.072565 s
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(288) called with curMem=96231321, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_43 stored as values in memory (estimated size 288.0 B, free 968.5 MB)
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=96231609, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_43_piece0 stored as bytes in memory (estimated size 4.0 MB, free 964.5 MB)
+15/11/14 03:07:20 INFO BlockManagerInfo: Added broadcast_43_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 964.6 MB)
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(3276054) called with curMem=100425913, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_43_piece1 stored as bytes in memory (estimated size 3.1 MB, free 961.4 MB)
+15/11/14 03:07:20 INFO BlockManagerInfo: Added broadcast_43_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 961.5 MB)
+15/11/14 03:07:20 INFO SparkContext: Created broadcast 43 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(288) called with curMem=103701967, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_44 stored as values in memory (estimated size 288.0 B, free 961.4 MB)
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(887861) called with curMem=103702255, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_44_piece0 stored as bytes in memory (estimated size 867.1 KB, free 960.5 MB)
+15/11/14 03:07:20 INFO BlockManagerInfo: Added broadcast_44_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 960.6 MB)
+15/11/14 03:07:20 INFO SparkContext: Created broadcast 44 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:20 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:07:20 INFO DAGScheduler: Got job 15 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:07:20 INFO DAGScheduler: Final stage: ResultStage 28(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:20 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 27)
+15/11/14 03:07:20 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:07:20 INFO DAGScheduler: Submitting ResultStage 28 (PythonRDD[22] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=104590116, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_45 stored as values in memory (estimated size 8.3 KB, free 960.5 MB)
+15/11/14 03:07:20 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=104598596, maxMem=1111794647
+15/11/14 03:07:20 INFO MemoryStore: Block broadcast_45_piece0 stored as bytes in memory (estimated size 5.1 KB, free 960.5 MB)
+15/11/14 03:07:20 INFO BlockManagerInfo: Added broadcast_45_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 960.6 MB)
+15/11/14 03:07:20 INFO SparkContext: Created broadcast 45 from broadcast at DAGScheduler.scala:861
+15/11/14 03:07:20 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 28 (PythonRDD[22] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:20 INFO TaskSchedulerImpl: Adding task set 28.0 with 3 tasks
+15/11/14 03:07:20 INFO TaskSetManager: Starting task 0.0 in stage 28.0 (TID 44, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:20 INFO TaskSetManager: Starting task 1.0 in stage 28.0 (TID 45, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:20 INFO TaskSetManager: Starting task 2.0 in stage 28.0 (TID 46, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:20 INFO Executor: Running task 0.0 in stage 28.0 (TID 44)
+15/11/14 03:07:20 INFO Executor: Running task 1.0 in stage 28.0 (TID 45)
+15/11/14 03:07:20 INFO Executor: Running task 2.0 in stage 28.0 (TID 46)
+15/11/14 03:07:20 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:07:20 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:07:20 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:07:21 INFO PythonRunner: Times: total = 987, boot = -142, init = 144, finish = 985
+15/11/14 03:07:21 INFO Executor: Finished task 2.0 in stage 28.0 (TID 46). 2786181 bytes result sent to driver
+15/11/14 03:07:21 INFO TaskSetManager: Finished task 2.0 in stage 28.0 (TID 46) in 1021 ms on localhost (1/3)
+15/11/14 03:07:21 INFO PythonRunner: Times: total = 1172, boot = -12107, init = 12112, finish = 1167
+15/11/14 03:07:21 INFO Executor: Finished task 1.0 in stage 28.0 (TID 45). 2786421 bytes result sent to driver
+15/11/14 03:07:21 INFO TaskSetManager: Finished task 1.0 in stage 28.0 (TID 45) in 1198 ms on localhost (2/3)
+15/11/14 03:07:34 INFO PythonRunner: Times: total = 14067, boot = -12426, init = 12442, finish = 14051
+15/11/14 03:07:34 INFO Executor: Finished task 0.0 in stage 28.0 (TID 44). 2786423 bytes result sent to driver
+15/11/14 03:07:34 INFO TaskSetManager: Finished task 0.0 in stage 28.0 (TID 44) in 14095 ms on localhost (3/3)
+15/11/14 03:07:34 INFO TaskSchedulerImpl: Removed TaskSet 28.0, whose tasks have all completed, from pool 
+15/11/14 03:07:34 INFO DAGScheduler: ResultStage 28 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.097 s
+15/11/14 03:07:34 INFO DAGScheduler: Job 15 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.114551 s
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(288) called with curMem=104603801, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_46 stored as values in memory (estimated size 288.0 B, free 960.5 MB)
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=104604089, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_46_piece0 stored as bytes in memory (estimated size 4.0 MB, free 956.5 MB)
+15/11/14 03:07:34 INFO BlockManagerInfo: Added broadcast_46_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 956.6 MB)
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(3276030) called with curMem=108798393, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_46_piece1 stored as bytes in memory (estimated size 3.1 MB, free 953.4 MB)
+15/11/14 03:07:34 INFO BlockManagerInfo: Added broadcast_46_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 953.5 MB)
+15/11/14 03:07:34 INFO SparkContext: Created broadcast 46 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(288) called with curMem=112074423, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_47 stored as values in memory (estimated size 288.0 B, free 953.4 MB)
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(887869) called with curMem=112074711, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_47_piece0 stored as bytes in memory (estimated size 867.1 KB, free 952.6 MB)
+15/11/14 03:07:34 INFO BlockManagerInfo: Added broadcast_47_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 952.6 MB)
+15/11/14 03:07:34 INFO SparkContext: Created broadcast 47 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:34 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:07:34 INFO DAGScheduler: Got job 16 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:07:34 INFO DAGScheduler: Final stage: ResultStage 30(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:34 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 29)
+15/11/14 03:07:34 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:07:34 INFO DAGScheduler: Submitting ResultStage 30 (PythonRDD[23] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=112962580, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_48 stored as values in memory (estimated size 8.3 KB, free 952.6 MB)
+15/11/14 03:07:34 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=112971060, maxMem=1111794647
+15/11/14 03:07:34 INFO MemoryStore: Block broadcast_48_piece0 stored as bytes in memory (estimated size 5.1 KB, free 952.5 MB)
+15/11/14 03:07:34 INFO BlockManagerInfo: Added broadcast_48_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 952.6 MB)
+15/11/14 03:07:34 INFO SparkContext: Created broadcast 48 from broadcast at DAGScheduler.scala:861
+15/11/14 03:07:34 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 30 (PythonRDD[23] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:34 INFO TaskSchedulerImpl: Adding task set 30.0 with 3 tasks
+15/11/14 03:07:34 INFO TaskSetManager: Starting task 0.0 in stage 30.0 (TID 47, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:34 INFO TaskSetManager: Starting task 1.0 in stage 30.0 (TID 48, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:34 INFO TaskSetManager: Starting task 2.0 in stage 30.0 (TID 49, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:34 INFO Executor: Running task 0.0 in stage 30.0 (TID 47)
+15/11/14 03:07:34 INFO Executor: Running task 2.0 in stage 30.0 (TID 49)
+15/11/14 03:07:34 INFO Executor: Running task 1.0 in stage 30.0 (TID 48)
+15/11/14 03:07:34 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:07:34 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:07:34 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:07:34 INFO PythonRunner: Times: total = 18, boot = -13218, init = 13222, finish = 14
+15/11/14 03:07:34 INFO Executor: Finished task 2.0 in stage 30.0 (TID 49). 2092 bytes result sent to driver
+15/11/14 03:07:34 INFO TaskSetManager: Finished task 2.0 in stage 30.0 (TID 49) in 28 ms on localhost (1/3)
+15/11/14 03:07:35 INFO PythonRunner: Times: total = 710, boot = -134, init = 139, finish = 705
+15/11/14 03:07:35 INFO Executor: Finished task 1.0 in stage 30.0 (TID 48). 2786421 bytes result sent to driver
+15/11/14 03:07:35 INFO TaskSetManager: Finished task 1.0 in stage 30.0 (TID 48) in 736 ms on localhost (2/3)
+15/11/14 03:07:47 INFO PythonRunner: Times: total = 13138, boot = -13034, init = 13057, finish = 13115
+15/11/14 03:07:47 INFO Executor: Finished task 0.0 in stage 30.0 (TID 47). 2786423 bytes result sent to driver
+15/11/14 03:07:47 INFO TaskSetManager: Finished task 0.0 in stage 30.0 (TID 47) in 13168 ms on localhost (3/3)
+15/11/14 03:07:47 INFO TaskSchedulerImpl: Removed TaskSet 30.0, whose tasks have all completed, from pool 
+15/11/14 03:07:47 INFO DAGScheduler: ResultStage 30 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.169 s
+15/11/14 03:07:47 INFO DAGScheduler: Job 16 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.186060 s
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(288) called with curMem=112976265, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_49 stored as values in memory (estimated size 288.0 B, free 952.5 MB)
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=112976553, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_49_piece0 stored as bytes in memory (estimated size 4.0 MB, free 948.5 MB)
+15/11/14 03:07:47 INFO BlockManagerInfo: Added broadcast_49_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 948.6 MB)
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(3276107) called with curMem=117170857, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_49_piece1 stored as bytes in memory (estimated size 3.1 MB, free 945.4 MB)
+15/11/14 03:07:47 INFO BlockManagerInfo: Added broadcast_49_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 945.5 MB)
+15/11/14 03:07:47 INFO SparkContext: Created broadcast 49 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(288) called with curMem=120446964, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_50 stored as values in memory (estimated size 288.0 B, free 945.4 MB)
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(887839) called with curMem=120447252, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_50_piece0 stored as bytes in memory (estimated size 867.0 KB, free 944.6 MB)
+15/11/14 03:07:47 INFO BlockManagerInfo: Added broadcast_50_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 944.7 MB)
+15/11/14 03:07:47 INFO SparkContext: Created broadcast 50 from broadcast at PythonRDD.scala:430
+15/11/14 03:07:47 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:07:47 INFO DAGScheduler: Got job 17 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:07:47 INFO DAGScheduler: Final stage: ResultStage 32(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:47 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 31)
+15/11/14 03:07:47 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:07:47 INFO DAGScheduler: Submitting ResultStage 32 (PythonRDD[24] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=121335091, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_51 stored as values in memory (estimated size 8.3 KB, free 944.6 MB)
+15/11/14 03:07:47 INFO MemoryStore: ensureFreeSpace(5200) called with curMem=121343571, maxMem=1111794647
+15/11/14 03:07:47 INFO MemoryStore: Block broadcast_51_piece0 stored as bytes in memory (estimated size 5.1 KB, free 944.6 MB)
+15/11/14 03:07:47 INFO BlockManagerInfo: Added broadcast_51_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 944.6 MB)
+15/11/14 03:07:47 INFO SparkContext: Created broadcast 51 from broadcast at DAGScheduler.scala:861
+15/11/14 03:07:47 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 32 (PythonRDD[24] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:07:47 INFO TaskSchedulerImpl: Adding task set 32.0 with 3 tasks
+15/11/14 03:07:47 INFO TaskSetManager: Starting task 0.0 in stage 32.0 (TID 50, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:47 INFO TaskSetManager: Starting task 1.0 in stage 32.0 (TID 51, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:47 INFO TaskSetManager: Starting task 2.0 in stage 32.0 (TID 52, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:07:47 INFO Executor: Running task 0.0 in stage 32.0 (TID 50)
+15/11/14 03:07:47 INFO Executor: Running task 1.0 in stage 32.0 (TID 51)
+15/11/14 03:07:47 INFO Executor: Running task 2.0 in stage 32.0 (TID 52)
+15/11/14 03:07:47 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:07:47 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:07:47 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:07:48 INFO PythonRunner: Times: total = 658, boot = -13254, init = 13260, finish = 652
+15/11/14 03:07:48 INFO Executor: Finished task 2.0 in stage 32.0 (TID 52). 2786181 bytes result sent to driver
+15/11/14 03:07:48 INFO TaskSetManager: Finished task 2.0 in stage 32.0 (TID 52) in 676 ms on localhost (1/3)
+15/11/14 03:07:48 INFO PythonRunner: Times: total = 1067, boot = -131, init = 137, finish = 1061
+15/11/14 03:07:48 INFO Executor: Finished task 1.0 in stage 32.0 (TID 51). 2786421 bytes result sent to driver
+15/11/14 03:07:48 INFO TaskSetManager: Finished task 1.0 in stage 32.0 (TID 51) in 1090 ms on localhost (2/3)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_20_piece0 on localhost:35937 in memory (size: 867.0 KB, free: 945.5 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_19_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 948.6 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_19_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 952.6 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_31_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 956.6 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_31_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 959.7 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_28_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 962.9 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_28_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 966.9 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_35_piece0 on localhost:35937 in memory (size: 867.0 KB, free: 967.7 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_34_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 971.7 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_34_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 974.8 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_42_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 974.8 MB)
+15/11/14 03:08:01 INFO ContextCleaner: Cleaned accumulator 17
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_45_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 974.8 MB)
+15/11/14 03:08:01 INFO ContextCleaner: Cleaned accumulator 18
+15/11/14 03:08:01 INFO ContextCleaner: Cleaned accumulator 19
+15/11/14 03:08:01 INFO BlockManagerInfo: Removed broadcast_48_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 974.9 MB)
+15/11/14 03:08:01 INFO PythonRunner: Times: total = 14101, boot = -12564, init = 12589, finish = 14076
+15/11/14 03:08:01 INFO Executor: Finished task 0.0 in stage 32.0 (TID 50). 2786423 bytes result sent to driver
+15/11/14 03:08:01 INFO TaskSetManager: Finished task 0.0 in stage 32.0 (TID 50) in 14128 ms on localhost (3/3)
+15/11/14 03:08:01 INFO TaskSchedulerImpl: Removed TaskSet 32.0, whose tasks have all completed, from pool 
+15/11/14 03:08:01 INFO DAGScheduler: ResultStage 32 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.129 s
+15/11/14 03:08:01 INFO DAGScheduler: Job 17 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.144838 s
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(288) called with curMem=89648677, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_52 stored as values in memory (estimated size 288.0 B, free 974.8 MB)
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=89648965, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_52_piece0 stored as bytes in memory (estimated size 4.0 MB, free 970.8 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Added broadcast_52_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 970.9 MB)
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(3276116) called with curMem=93843269, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_52_piece1 stored as bytes in memory (estimated size 3.1 MB, free 967.7 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Added broadcast_52_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 967.7 MB)
+15/11/14 03:08:01 INFO SparkContext: Created broadcast 52 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(288) called with curMem=97119385, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_53 stored as values in memory (estimated size 288.0 B, free 967.7 MB)
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(887856) called with curMem=97119673, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_53_piece0 stored as bytes in memory (estimated size 867.0 KB, free 966.8 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Added broadcast_53_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 966.9 MB)
+15/11/14 03:08:01 INFO SparkContext: Created broadcast 53 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:01 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:08:01 INFO DAGScheduler: Got job 18 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:08:01 INFO DAGScheduler: Final stage: ResultStage 34(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:01 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 33)
+15/11/14 03:08:01 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:08:01 INFO DAGScheduler: Submitting ResultStage 34 (PythonRDD[25] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=98007529, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_54 stored as values in memory (estimated size 8.3 KB, free 966.8 MB)
+15/11/14 03:08:01 INFO MemoryStore: ensureFreeSpace(5201) called with curMem=98016009, maxMem=1111794647
+15/11/14 03:08:01 INFO MemoryStore: Block broadcast_54_piece0 stored as bytes in memory (estimated size 5.1 KB, free 966.8 MB)
+15/11/14 03:08:01 INFO BlockManagerInfo: Added broadcast_54_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 966.9 MB)
+15/11/14 03:08:01 INFO SparkContext: Created broadcast 54 from broadcast at DAGScheduler.scala:861
+15/11/14 03:08:01 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 34 (PythonRDD[25] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:01 INFO TaskSchedulerImpl: Adding task set 34.0 with 3 tasks
+15/11/14 03:08:01 INFO TaskSetManager: Starting task 0.0 in stage 34.0 (TID 53, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:01 INFO TaskSetManager: Starting task 1.0 in stage 34.0 (TID 54, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:01 INFO TaskSetManager: Starting task 2.0 in stage 34.0 (TID 55, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:01 INFO Executor: Running task 0.0 in stage 34.0 (TID 53)
+15/11/14 03:08:01 INFO Executor: Running task 1.0 in stage 34.0 (TID 54)
+15/11/14 03:08:01 INFO Executor: Running task 2.0 in stage 34.0 (TID 55)
+15/11/14 03:08:01 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:08:01 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:08:01 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:08:02 INFO PythonRunner: Times: total = 1060, boot = -134, init = 141, finish = 1053
+15/11/14 03:08:02 INFO Executor: Finished task 2.0 in stage 34.0 (TID 55). 2786181 bytes result sent to driver
+15/11/14 03:08:02 INFO TaskSetManager: Finished task 2.0 in stage 34.0 (TID 55) in 1083 ms on localhost (1/3)
+15/11/14 03:08:03 INFO PythonRunner: Times: total = 1168, boot = -13584, init = 13591, finish = 1161
+15/11/14 03:08:03 INFO Executor: Finished task 1.0 in stage 34.0 (TID 54). 2786421 bytes result sent to driver
+15/11/14 03:08:03 INFO TaskSetManager: Finished task 1.0 in stage 34.0 (TID 54) in 1191 ms on localhost (2/3)
+15/11/14 03:08:17 INFO PythonRunner: Times: total = 16061, boot = -13171, init = 13188, finish = 16044
+15/11/14 03:08:17 INFO Executor: Finished task 0.0 in stage 34.0 (TID 53). 2786423 bytes result sent to driver
+15/11/14 03:08:17 INFO TaskSetManager: Finished task 0.0 in stage 34.0 (TID 53) in 16085 ms on localhost (3/3)
+15/11/14 03:08:17 INFO TaskSchedulerImpl: Removed TaskSet 34.0, whose tasks have all completed, from pool 
+15/11/14 03:08:17 INFO DAGScheduler: ResultStage 34 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 16.086 s
+15/11/14 03:08:17 INFO DAGScheduler: Job 18 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 16.100724 s
+15/11/14 03:08:17 INFO MemoryStore: ensureFreeSpace(288) called with curMem=98021210, maxMem=1111794647
+15/11/14 03:08:17 INFO MemoryStore: Block broadcast_55 stored as values in memory (estimated size 288.0 B, free 966.8 MB)
+15/11/14 03:08:17 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=98021498, maxMem=1111794647
+15/11/14 03:08:17 INFO MemoryStore: Block broadcast_55_piece0 stored as bytes in memory (estimated size 4.0 MB, free 962.8 MB)
+15/11/14 03:08:17 INFO BlockManagerInfo: Added broadcast_55_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 962.9 MB)
+15/11/14 03:08:17 INFO MemoryStore: ensureFreeSpace(3276047) called with curMem=102215802, maxMem=1111794647
+15/11/14 03:08:17 INFO MemoryStore: Block broadcast_55_piece1 stored as bytes in memory (estimated size 3.1 MB, free 959.7 MB)
+15/11/14 03:08:18 INFO BlockManagerInfo: Added broadcast_55_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 959.8 MB)
+15/11/14 03:08:18 INFO SparkContext: Created broadcast 55 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:18 INFO MemoryStore: ensureFreeSpace(288) called with curMem=105491849, maxMem=1111794647
+15/11/14 03:08:18 INFO MemoryStore: Block broadcast_56 stored as values in memory (estimated size 288.0 B, free 959.7 MB)
+15/11/14 03:08:18 INFO MemoryStore: ensureFreeSpace(887896) called with curMem=105492137, maxMem=1111794647
+15/11/14 03:08:18 INFO MemoryStore: Block broadcast_56_piece0 stored as bytes in memory (estimated size 867.1 KB, free 958.8 MB)
+15/11/14 03:08:18 INFO BlockManagerInfo: Added broadcast_56_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 958.9 MB)
+15/11/14 03:08:18 INFO SparkContext: Created broadcast 56 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:18 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:08:18 INFO DAGScheduler: Got job 19 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:08:18 INFO DAGScheduler: Final stage: ResultStage 36(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 35)
+15/11/14 03:08:18 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:08:18 INFO DAGScheduler: Submitting ResultStage 36 (PythonRDD[26] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:08:18 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=106380033, maxMem=1111794647
+15/11/14 03:08:18 INFO MemoryStore: Block broadcast_57 stored as values in memory (estimated size 8.3 KB, free 958.8 MB)
+15/11/14 03:08:18 INFO MemoryStore: ensureFreeSpace(5201) called with curMem=106388513, maxMem=1111794647
+15/11/14 03:08:18 INFO MemoryStore: Block broadcast_57_piece0 stored as bytes in memory (estimated size 5.1 KB, free 958.8 MB)
+15/11/14 03:08:18 INFO BlockManagerInfo: Added broadcast_57_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 958.9 MB)
+15/11/14 03:08:18 INFO SparkContext: Created broadcast 57 from broadcast at DAGScheduler.scala:861
+15/11/14 03:08:18 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 36 (PythonRDD[26] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:18 INFO TaskSchedulerImpl: Adding task set 36.0 with 3 tasks
+15/11/14 03:08:18 INFO TaskSetManager: Starting task 0.0 in stage 36.0 (TID 56, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:18 INFO TaskSetManager: Starting task 1.0 in stage 36.0 (TID 57, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:18 INFO TaskSetManager: Starting task 2.0 in stage 36.0 (TID 58, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:18 INFO Executor: Running task 0.0 in stage 36.0 (TID 56)
+15/11/14 03:08:18 INFO Executor: Running task 1.0 in stage 36.0 (TID 57)
+15/11/14 03:08:18 INFO Executor: Running task 2.0 in stage 36.0 (TID 58)
+15/11/14 03:08:18 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:08:18 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:08:18 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:08:18 INFO PythonRunner: Times: total = 25, boot = -100, init = 106, finish = 19
+15/11/14 03:08:18 INFO Executor: Finished task 2.0 in stage 36.0 (TID 58). 2092 bytes result sent to driver
+15/11/14 03:08:18 INFO TaskSetManager: Finished task 2.0 in stage 36.0 (TID 58) in 34 ms on localhost (1/3)
+15/11/14 03:08:18 INFO PythonRunner: Times: total = 895, boot = -15003, init = 15010, finish = 888
+15/11/14 03:08:18 INFO Executor: Finished task 1.0 in stage 36.0 (TID 57). 2786421 bytes result sent to driver
+15/11/14 03:08:18 INFO TaskSetManager: Finished task 1.0 in stage 36.0 (TID 57) in 917 ms on localhost (2/3)
+15/11/14 03:08:32 INFO PythonRunner: Times: total = 14615, boot = -15109, init = 15131, finish = 14593
+15/11/14 03:08:32 INFO Executor: Finished task 0.0 in stage 36.0 (TID 56). 2786423 bytes result sent to driver
+15/11/14 03:08:32 INFO TaskSetManager: Finished task 0.0 in stage 36.0 (TID 56) in 14642 ms on localhost (3/3)
+15/11/14 03:08:32 INFO TaskSchedulerImpl: Removed TaskSet 36.0, whose tasks have all completed, from pool 
+15/11/14 03:08:32 INFO DAGScheduler: ResultStage 36 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.642 s
+15/11/14 03:08:32 INFO DAGScheduler: Job 19 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.655165 s
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(288) called with curMem=106393714, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_58 stored as values in memory (estimated size 288.0 B, free 958.8 MB)
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=106394002, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_58_piece0 stored as bytes in memory (estimated size 4.0 MB, free 954.8 MB)
+15/11/14 03:08:32 INFO BlockManagerInfo: Added broadcast_58_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 954.9 MB)
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(3276020) called with curMem=110588306, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_58_piece1 stored as bytes in memory (estimated size 3.1 MB, free 951.7 MB)
+15/11/14 03:08:32 INFO BlockManagerInfo: Added broadcast_58_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 951.8 MB)
+15/11/14 03:08:32 INFO SparkContext: Created broadcast 58 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(288) called with curMem=113864326, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_59 stored as values in memory (estimated size 288.0 B, free 951.7 MB)
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(887866) called with curMem=113864614, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_59_piece0 stored as bytes in memory (estimated size 867.1 KB, free 950.9 MB)
+15/11/14 03:08:32 INFO BlockManagerInfo: Added broadcast_59_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 950.9 MB)
+15/11/14 03:08:32 INFO SparkContext: Created broadcast 59 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:32 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:08:32 INFO DAGScheduler: Got job 20 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:08:32 INFO DAGScheduler: Final stage: ResultStage 38(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:32 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 37)
+15/11/14 03:08:32 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:08:32 INFO DAGScheduler: Submitting ResultStage 38 (PythonRDD[27] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=114752480, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_60 stored as values in memory (estimated size 8.3 KB, free 950.8 MB)
+15/11/14 03:08:32 INFO MemoryStore: ensureFreeSpace(5203) called with curMem=114760960, maxMem=1111794647
+15/11/14 03:08:32 INFO MemoryStore: Block broadcast_60_piece0 stored as bytes in memory (estimated size 5.1 KB, free 950.8 MB)
+15/11/14 03:08:32 INFO BlockManagerInfo: Added broadcast_60_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 950.9 MB)
+15/11/14 03:08:32 INFO SparkContext: Created broadcast 60 from broadcast at DAGScheduler.scala:861
+15/11/14 03:08:32 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 38 (PythonRDD[27] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:32 INFO TaskSchedulerImpl: Adding task set 38.0 with 3 tasks
+15/11/14 03:08:32 INFO TaskSetManager: Starting task 0.0 in stage 38.0 (TID 59, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:32 INFO TaskSetManager: Starting task 1.0 in stage 38.0 (TID 60, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:32 INFO TaskSetManager: Starting task 2.0 in stage 38.0 (TID 61, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:32 INFO Executor: Running task 0.0 in stage 38.0 (TID 59)
+15/11/14 03:08:32 INFO Executor: Running task 2.0 in stage 38.0 (TID 61)
+15/11/14 03:08:32 INFO Executor: Running task 1.0 in stage 38.0 (TID 60)
+15/11/14 03:08:32 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:08:32 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:08:32 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:08:33 INFO PythonRunner: Times: total = 465, boot = -14721, init = 14724, finish = 462
+15/11/14 03:08:33 INFO Executor: Finished task 2.0 in stage 38.0 (TID 61). 2786181 bytes result sent to driver
+15/11/14 03:08:33 INFO TaskSetManager: Finished task 2.0 in stage 38.0 (TID 61) in 490 ms on localhost (1/3)
+15/11/14 03:08:33 INFO PythonRunner: Times: total = 1187, boot = -129, init = 137, finish = 1179
+15/11/14 03:08:34 INFO Executor: Finished task 1.0 in stage 38.0 (TID 60). 2786421 bytes result sent to driver
+15/11/14 03:08:34 INFO TaskSetManager: Finished task 1.0 in stage 38.0 (TID 60) in 1213 ms on localhost (2/3)
+15/11/14 03:08:45 INFO PythonRunner: Times: total = 12915, boot = -13852, init = 13868, finish = 12899
+15/11/14 03:08:45 INFO Executor: Finished task 0.0 in stage 38.0 (TID 59). 2786423 bytes result sent to driver
+15/11/14 03:08:45 INFO TaskSetManager: Finished task 0.0 in stage 38.0 (TID 59) in 12941 ms on localhost (3/3)
+15/11/14 03:08:45 INFO TaskSchedulerImpl: Removed TaskSet 38.0, whose tasks have all completed, from pool 
+15/11/14 03:08:45 INFO DAGScheduler: ResultStage 38 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 12.942 s
+15/11/14 03:08:45 INFO DAGScheduler: Job 20 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 12.957540 s
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(288) called with curMem=114766163, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_61 stored as values in memory (estimated size 288.0 B, free 950.8 MB)
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=114766451, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_61_piece0 stored as bytes in memory (estimated size 4.0 MB, free 946.8 MB)
+15/11/14 03:08:45 INFO BlockManagerInfo: Added broadcast_61_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 946.9 MB)
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(3276123) called with curMem=118960755, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_61_piece1 stored as bytes in memory (estimated size 3.1 MB, free 943.7 MB)
+15/11/14 03:08:45 INFO BlockManagerInfo: Added broadcast_61_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 943.8 MB)
+15/11/14 03:08:45 INFO SparkContext: Created broadcast 61 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(288) called with curMem=122236878, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_62 stored as values in memory (estimated size 288.0 B, free 943.7 MB)
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(887871) called with curMem=122237166, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_62_piece0 stored as bytes in memory (estimated size 867.1 KB, free 942.9 MB)
+15/11/14 03:08:45 INFO BlockManagerInfo: Added broadcast_62_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 943.0 MB)
+15/11/14 03:08:45 INFO SparkContext: Created broadcast 62 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:45 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:08:45 INFO DAGScheduler: Got job 21 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:08:45 INFO DAGScheduler: Final stage: ResultStage 40(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:45 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 39)
+15/11/14 03:08:45 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:08:45 INFO DAGScheduler: Submitting ResultStage 40 (PythonRDD[28] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=123125037, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_63 stored as values in memory (estimated size 8.3 KB, free 942.9 MB)
+15/11/14 03:08:45 INFO MemoryStore: ensureFreeSpace(5203) called with curMem=123133517, maxMem=1111794647
+15/11/14 03:08:45 INFO MemoryStore: Block broadcast_63_piece0 stored as bytes in memory (estimated size 5.1 KB, free 942.9 MB)
+15/11/14 03:08:45 INFO BlockManagerInfo: Added broadcast_63_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 942.9 MB)
+15/11/14 03:08:45 INFO SparkContext: Created broadcast 63 from broadcast at DAGScheduler.scala:861
+15/11/14 03:08:45 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 40 (PythonRDD[28] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:45 INFO TaskSchedulerImpl: Adding task set 40.0 with 3 tasks
+15/11/14 03:08:45 INFO TaskSetManager: Starting task 0.0 in stage 40.0 (TID 62, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:45 INFO TaskSetManager: Starting task 1.0 in stage 40.0 (TID 63, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:45 INFO TaskSetManager: Starting task 2.0 in stage 40.0 (TID 64, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:45 INFO Executor: Running task 1.0 in stage 40.0 (TID 63)
+15/11/14 03:08:45 INFO Executor: Running task 0.0 in stage 40.0 (TID 62)
+15/11/14 03:08:45 INFO Executor: Running task 2.0 in stage 40.0 (TID 64)
+15/11/14 03:08:45 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:08:45 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:08:45 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:08:46 INFO PythonRunner: Times: total = 1128, boot = -12575, init = 12578, finish = 1125
+15/11/14 03:08:47 INFO BlockManagerInfo: Removed broadcast_51_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 943.0 MB)
+15/11/14 03:08:47 INFO ContextCleaner: Cleaned accumulator 20
+15/11/14 03:08:47 INFO BlockManagerInfo: Removed broadcast_54_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 943.0 MB)
+15/11/14 03:08:47 INFO ContextCleaner: Cleaned accumulator 21
+15/11/14 03:08:47 INFO BlockManagerInfo: Removed broadcast_57_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 943.0 MB)
+15/11/14 03:08:47 INFO ContextCleaner: Cleaned accumulator 22
+15/11/14 03:08:47 INFO Executor: Finished task 2.0 in stage 40.0 (TID 64). 2786181 bytes result sent to driver
+15/11/14 03:08:47 INFO BlockManagerInfo: Removed broadcast_60_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 943.0 MB)
+15/11/14 03:08:47 INFO ContextCleaner: Cleaned accumulator 23
+15/11/14 03:08:47 INFO TaskSetManager: Finished task 2.0 in stage 40.0 (TID 64) in 1173 ms on localhost (1/3)
+15/11/14 03:08:47 INFO PythonRunner: Times: total = 1168, boot = -11849, init = 11857, finish = 1160
+15/11/14 03:08:47 INFO Executor: Finished task 1.0 in stage 40.0 (TID 63). 2786421 bytes result sent to driver
+15/11/14 03:08:47 INFO TaskSetManager: Finished task 1.0 in stage 40.0 (TID 63) in 1194 ms on localhost (2/3)
+15/11/14 03:08:59 INFO PythonRunner: Times: total = 13844, boot = -117, init = 142, finish = 13819
+15/11/14 03:08:59 INFO Executor: Finished task 0.0 in stage 40.0 (TID 62). 2786423 bytes result sent to driver
+15/11/14 03:08:59 INFO TaskSetManager: Finished task 0.0 in stage 40.0 (TID 62) in 13871 ms on localhost (3/3)
+15/11/14 03:08:59 INFO TaskSchedulerImpl: Removed TaskSet 40.0, whose tasks have all completed, from pool 
+15/11/14 03:08:59 INFO DAGScheduler: ResultStage 40 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.873 s
+15/11/14 03:08:59 INFO DAGScheduler: Job 21 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.888427 s
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(288) called with curMem=123083995, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_64 stored as values in memory (estimated size 288.0 B, free 942.9 MB)
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=123084283, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_64_piece0 stored as bytes in memory (estimated size 4.0 MB, free 938.9 MB)
+15/11/14 03:08:59 INFO BlockManagerInfo: Added broadcast_64_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 939.0 MB)
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(3276078) called with curMem=127278587, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_64_piece1 stored as bytes in memory (estimated size 3.1 MB, free 935.8 MB)
+15/11/14 03:08:59 INFO BlockManagerInfo: Added broadcast_64_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 935.8 MB)
+15/11/14 03:08:59 INFO SparkContext: Created broadcast 64 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(288) called with curMem=130554665, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_65 stored as values in memory (estimated size 288.0 B, free 935.8 MB)
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(887873) called with curMem=130554953, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_65_piece0 stored as bytes in memory (estimated size 867.1 KB, free 934.9 MB)
+15/11/14 03:08:59 INFO BlockManagerInfo: Added broadcast_65_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 935.0 MB)
+15/11/14 03:08:59 INFO SparkContext: Created broadcast 65 from broadcast at PythonRDD.scala:430
+15/11/14 03:08:59 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:08:59 INFO DAGScheduler: Got job 22 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:08:59 INFO DAGScheduler: Final stage: ResultStage 42(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:59 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 41)
+15/11/14 03:08:59 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:08:59 INFO DAGScheduler: Submitting ResultStage 42 (PythonRDD[29] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=131442826, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_66 stored as values in memory (estimated size 8.3 KB, free 934.9 MB)
+15/11/14 03:08:59 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=131451306, maxMem=1111794647
+15/11/14 03:08:59 INFO MemoryStore: Block broadcast_66_piece0 stored as bytes in memory (estimated size 5.1 KB, free 934.9 MB)
+15/11/14 03:08:59 INFO BlockManagerInfo: Added broadcast_66_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 935.0 MB)
+15/11/14 03:08:59 INFO SparkContext: Created broadcast 66 from broadcast at DAGScheduler.scala:861
+15/11/14 03:08:59 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 42 (PythonRDD[29] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:08:59 INFO TaskSchedulerImpl: Adding task set 42.0 with 3 tasks
+15/11/14 03:08:59 INFO TaskSetManager: Starting task 0.0 in stage 42.0 (TID 65, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:59 INFO TaskSetManager: Starting task 1.0 in stage 42.0 (TID 66, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:59 INFO TaskSetManager: Starting task 2.0 in stage 42.0 (TID 67, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:08:59 INFO Executor: Running task 2.0 in stage 42.0 (TID 67)
+15/11/14 03:08:59 INFO Executor: Running task 0.0 in stage 42.0 (TID 65)
+15/11/14 03:08:59 INFO Executor: Running task 1.0 in stage 42.0 (TID 66)
+15/11/14 03:08:59 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:08:59 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:08:59 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:08:59 INFO PythonRunner: Times: total = 31, boot = -12840, init = 12848, finish = 23
+15/11/14 03:08:59 INFO Executor: Finished task 2.0 in stage 42.0 (TID 67). 2092 bytes result sent to driver
+15/11/14 03:08:59 INFO TaskSetManager: Finished task 2.0 in stage 42.0 (TID 67) in 39 ms on localhost (1/3)
+15/11/14 03:09:00 INFO PythonRunner: Times: total = 993, boot = -12812, init = 12818, finish = 987
+15/11/14 03:09:00 INFO Executor: Finished task 1.0 in stage 42.0 (TID 66). 2786421 bytes result sent to driver
+15/11/14 03:09:00 INFO TaskSetManager: Finished task 1.0 in stage 42.0 (TID 66) in 1017 ms on localhost (2/3)
+15/11/14 03:09:13 INFO PythonRunner: Times: total = 13438, boot = -130, init = 152, finish = 13416
+15/11/14 03:09:13 INFO Executor: Finished task 0.0 in stage 42.0 (TID 65). 2786423 bytes result sent to driver
+15/11/14 03:09:13 INFO TaskSetManager: Finished task 0.0 in stage 42.0 (TID 65) in 13465 ms on localhost (3/3)
+15/11/14 03:09:13 INFO TaskSchedulerImpl: Removed TaskSet 42.0, whose tasks have all completed, from pool 
+15/11/14 03:09:13 INFO DAGScheduler: ResultStage 42 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.467 s
+15/11/14 03:09:13 INFO DAGScheduler: Job 22 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.481155 s
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(288) called with curMem=131456511, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_67 stored as values in memory (estimated size 288.0 B, free 934.9 MB)
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=131456799, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_67_piece0 stored as bytes in memory (estimated size 4.0 MB, free 930.9 MB)
+15/11/14 03:09:13 INFO BlockManagerInfo: Added broadcast_67_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 931.0 MB)
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(3276055) called with curMem=135651103, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_67_piece1 stored as bytes in memory (estimated size 3.1 MB, free 927.8 MB)
+15/11/14 03:09:13 INFO BlockManagerInfo: Added broadcast_67_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 927.9 MB)
+15/11/14 03:09:13 INFO SparkContext: Created broadcast 67 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(288) called with curMem=138927158, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_68 stored as values in memory (estimated size 288.0 B, free 927.8 MB)
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(887855) called with curMem=138927446, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_68_piece0 stored as bytes in memory (estimated size 867.0 KB, free 927.0 MB)
+15/11/14 03:09:13 INFO BlockManagerInfo: Added broadcast_68_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 927.0 MB)
+15/11/14 03:09:13 INFO SparkContext: Created broadcast 68 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:13 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:09:13 INFO DAGScheduler: Got job 23 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:09:13 INFO DAGScheduler: Final stage: ResultStage 44(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:13 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 43)
+15/11/14 03:09:13 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:09:13 INFO DAGScheduler: Submitting ResultStage 44 (PythonRDD[30] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=139815301, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_69 stored as values in memory (estimated size 8.3 KB, free 926.9 MB)
+15/11/14 03:09:13 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=139823781, maxMem=1111794647
+15/11/14 03:09:13 INFO MemoryStore: Block broadcast_69_piece0 stored as bytes in memory (estimated size 5.1 KB, free 926.9 MB)
+15/11/14 03:09:13 INFO BlockManagerInfo: Added broadcast_69_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 927.0 MB)
+15/11/14 03:09:13 INFO SparkContext: Created broadcast 69 from broadcast at DAGScheduler.scala:861
+15/11/14 03:09:13 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 44 (PythonRDD[30] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:13 INFO TaskSchedulerImpl: Adding task set 44.0 with 3 tasks
+15/11/14 03:09:13 INFO TaskSetManager: Starting task 0.0 in stage 44.0 (TID 68, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:13 INFO TaskSetManager: Starting task 1.0 in stage 44.0 (TID 69, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:13 INFO TaskSetManager: Starting task 2.0 in stage 44.0 (TID 70, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:13 INFO Executor: Running task 1.0 in stage 44.0 (TID 69)
+15/11/14 03:09:13 INFO Executor: Running task 0.0 in stage 44.0 (TID 68)
+15/11/14 03:09:13 INFO Executor: Running task 2.0 in stage 44.0 (TID 70)
+15/11/14 03:09:13 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:09:13 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:09:13 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:09:13 INFO PythonRunner: Times: total = 554, boot = -129, init = 133, finish = 550
+15/11/14 03:09:13 INFO Executor: Finished task 2.0 in stage 44.0 (TID 70). 2786181 bytes result sent to driver
+15/11/14 03:09:13 INFO TaskSetManager: Finished task 2.0 in stage 44.0 (TID 70) in 579 ms on localhost (1/3)
+15/11/14 03:09:14 INFO PythonRunner: Times: total = 1145, boot = -12559, init = 12563, finish = 1141
+15/11/14 03:09:14 INFO Executor: Finished task 1.0 in stage 44.0 (TID 69). 2786421 bytes result sent to driver
+15/11/14 03:09:14 INFO TaskSetManager: Finished task 1.0 in stage 44.0 (TID 69) in 1174 ms on localhost (2/3)
+15/11/14 03:09:28 INFO PythonRunner: Times: total = 14925, boot = -13536, init = 13557, finish = 14904
+15/11/14 03:09:28 INFO Executor: Finished task 0.0 in stage 44.0 (TID 68). 2786423 bytes result sent to driver
+15/11/14 03:09:28 INFO TaskSetManager: Finished task 0.0 in stage 44.0 (TID 68) in 14950 ms on localhost (3/3)
+15/11/14 03:09:28 INFO TaskSchedulerImpl: Removed TaskSet 44.0, whose tasks have all completed, from pool 
+15/11/14 03:09:28 INFO DAGScheduler: ResultStage 44 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.951 s
+15/11/14 03:09:28 INFO DAGScheduler: Job 23 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.967257 s
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(288) called with curMem=139828986, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_70 stored as values in memory (estimated size 288.0 B, free 926.9 MB)
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=139829274, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_70_piece0 stored as bytes in memory (estimated size 4.0 MB, free 922.9 MB)
+15/11/14 03:09:28 INFO BlockManagerInfo: Added broadcast_70_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 923.0 MB)
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(3276156) called with curMem=144023578, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_70_piece1 stored as bytes in memory (estimated size 3.1 MB, free 919.8 MB)
+15/11/14 03:09:28 INFO BlockManagerInfo: Added broadcast_70_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 919.9 MB)
+15/11/14 03:09:28 INFO SparkContext: Created broadcast 70 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(288) called with curMem=147299734, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_71 stored as values in memory (estimated size 288.0 B, free 919.8 MB)
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(887890) called with curMem=147300022, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_71_piece0 stored as bytes in memory (estimated size 867.1 KB, free 919.0 MB)
+15/11/14 03:09:28 INFO BlockManagerInfo: Added broadcast_71_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 919.0 MB)
+15/11/14 03:09:28 INFO SparkContext: Created broadcast 71 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:28 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:09:28 INFO DAGScheduler: Got job 24 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:09:28 INFO DAGScheduler: Final stage: ResultStage 46(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:28 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 45)
+15/11/14 03:09:28 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:09:28 INFO DAGScheduler: Submitting ResultStage 46 (PythonRDD[31] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=148187912, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_72 stored as values in memory (estimated size 8.3 KB, free 919.0 MB)
+15/11/14 03:09:28 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=148196392, maxMem=1111794647
+15/11/14 03:09:28 INFO MemoryStore: Block broadcast_72_piece0 stored as bytes in memory (estimated size 5.1 KB, free 919.0 MB)
+15/11/14 03:09:28 INFO BlockManagerInfo: Added broadcast_72_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 919.0 MB)
+15/11/14 03:09:28 INFO SparkContext: Created broadcast 72 from broadcast at DAGScheduler.scala:861
+15/11/14 03:09:28 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 46 (PythonRDD[31] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:28 INFO TaskSchedulerImpl: Adding task set 46.0 with 3 tasks
+15/11/14 03:09:28 INFO TaskSetManager: Starting task 0.0 in stage 46.0 (TID 71, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:28 INFO TaskSetManager: Starting task 1.0 in stage 46.0 (TID 72, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:28 INFO TaskSetManager: Starting task 2.0 in stage 46.0 (TID 73, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:28 INFO Executor: Running task 0.0 in stage 46.0 (TID 71)
+15/11/14 03:09:28 INFO Executor: Running task 1.0 in stage 46.0 (TID 72)
+15/11/14 03:09:28 INFO Executor: Running task 2.0 in stage 46.0 (TID 73)
+15/11/14 03:09:28 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:09:28 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:09:28 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:09:29 INFO PythonRunner: Times: total = 1081, boot = -106, init = 111, finish = 1076
+15/11/14 03:09:29 INFO Executor: Finished task 2.0 in stage 46.0 (TID 73). 2786181 bytes result sent to driver
+15/11/14 03:09:29 INFO TaskSetManager: Finished task 2.0 in stage 46.0 (TID 73) in 1104 ms on localhost (1/3)
+15/11/14 03:09:29 INFO PythonRunner: Times: total = 1247, boot = -14487, init = 14491, finish = 1243
+15/11/14 03:09:29 INFO Executor: Finished task 1.0 in stage 46.0 (TID 72). 2786421 bytes result sent to driver
+15/11/14 03:09:29 INFO TaskSetManager: Finished task 1.0 in stage 46.0 (TID 72) in 1271 ms on localhost (2/3)
+15/11/14 03:09:45 INFO PythonRunner: Times: total = 16597, boot = -13889, init = 13906, finish = 16580
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_67_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 922.2 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_67_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 926.2 MB)
+15/11/14 03:09:45 INFO Executor: Finished task 0.0 in stage 46.0 (TID 71). 2786423 bytes result sent to driver
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_69_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 926.2 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_66_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 926.2 MB)
+15/11/14 03:09:45 INFO TaskSetManager: Finished task 0.0 in stage 46.0 (TID 71) in 16643 ms on localhost (3/3)
+15/11/14 03:09:45 INFO TaskSchedulerImpl: Removed TaskSet 46.0, whose tasks have all completed, from pool 
+15/11/14 03:09:45 INFO ContextCleaner: Cleaned accumulator 25
+15/11/14 03:09:45 INFO DAGScheduler: ResultStage 46 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 16.644 s
+15/11/14 03:09:45 INFO DAGScheduler: Job 24 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 16.654327 s
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_64_piece1 on localhost:35937 in memory (size: 3.1 MB, free: 929.3 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_64_piece0 on localhost:35937 in memory (size: 4.0 MB, free: 933.3 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_68_piece0 on localhost:35937 in memory (size: 867.0 KB, free: 934.1 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Removed broadcast_65_piece0 on localhost:35937 in memory (size: 867.1 KB, free: 935.0 MB)
+15/11/14 03:09:45 INFO ContextCleaner: Cleaned accumulator 26
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(288) called with curMem=131456607, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_73 stored as values in memory (estimated size 288.0 B, free 934.9 MB)
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=131456895, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_73_piece0 stored as bytes in memory (estimated size 4.0 MB, free 930.9 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Added broadcast_73_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 931.0 MB)
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(3276100) called with curMem=135651199, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_73_piece1 stored as bytes in memory (estimated size 3.1 MB, free 927.8 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Added broadcast_73_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 927.9 MB)
+15/11/14 03:09:45 INFO SparkContext: Created broadcast 73 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(288) called with curMem=138927299, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_74 stored as values in memory (estimated size 288.0 B, free 927.8 MB)
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(887885) called with curMem=138927587, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_74_piece0 stored as bytes in memory (estimated size 867.1 KB, free 927.0 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Added broadcast_74_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 927.0 MB)
+15/11/14 03:09:45 INFO SparkContext: Created broadcast 74 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:45 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:09:45 INFO DAGScheduler: Got job 25 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:09:45 INFO DAGScheduler: Final stage: ResultStage 48(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:45 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 47)
+15/11/14 03:09:45 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:09:45 INFO DAGScheduler: Submitting ResultStage 48 (PythonRDD[32] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=139815472, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_75 stored as values in memory (estimated size 8.3 KB, free 926.9 MB)
+15/11/14 03:09:45 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=139823952, maxMem=1111794647
+15/11/14 03:09:45 INFO MemoryStore: Block broadcast_75_piece0 stored as bytes in memory (estimated size 5.1 KB, free 926.9 MB)
+15/11/14 03:09:45 INFO BlockManagerInfo: Added broadcast_75_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 927.0 MB)
+15/11/14 03:09:45 INFO SparkContext: Created broadcast 75 from broadcast at DAGScheduler.scala:861
+15/11/14 03:09:45 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 48 (PythonRDD[32] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:45 INFO TaskSchedulerImpl: Adding task set 48.0 with 3 tasks
+15/11/14 03:09:45 INFO TaskSetManager: Starting task 0.0 in stage 48.0 (TID 74, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:45 INFO TaskSetManager: Starting task 1.0 in stage 48.0 (TID 75, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:45 INFO TaskSetManager: Starting task 2.0 in stage 48.0 (TID 76, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:45 INFO Executor: Running task 1.0 in stage 48.0 (TID 75)
+15/11/14 03:09:45 INFO Executor: Running task 2.0 in stage 48.0 (TID 76)
+15/11/14 03:09:45 INFO Executor: Running task 0.0 in stage 48.0 (TID 74)
+15/11/14 03:09:45 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:09:45 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:09:45 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:09:45 INFO PythonRunner: Times: total = 27, boot = -15510, init = 15517, finish = 20
+15/11/14 03:09:45 INFO Executor: Finished task 2.0 in stage 48.0 (TID 76). 2092 bytes result sent to driver
+15/11/14 03:09:45 INFO TaskSetManager: Finished task 2.0 in stage 48.0 (TID 76) in 38 ms on localhost (1/3)
+15/11/14 03:09:46 INFO PythonRunner: Times: total = 1028, boot = -15668, init = 15673, finish = 1023
+15/11/14 03:09:46 INFO Executor: Finished task 1.0 in stage 48.0 (TID 75). 2786421 bytes result sent to driver
+15/11/14 03:09:46 INFO TaskSetManager: Finished task 1.0 in stage 48.0 (TID 75) in 1055 ms on localhost (2/3)
+15/11/14 03:09:59 INFO PythonRunner: Times: total = 14089, boot = -138, init = 159, finish = 14068
+15/11/14 03:09:59 INFO Executor: Finished task 0.0 in stage 48.0 (TID 74). 2786423 bytes result sent to driver
+15/11/14 03:09:59 INFO TaskSetManager: Finished task 0.0 in stage 48.0 (TID 74) in 14118 ms on localhost (3/3)
+15/11/14 03:09:59 INFO TaskSchedulerImpl: Removed TaskSet 48.0, whose tasks have all completed, from pool 
+15/11/14 03:09:59 INFO DAGScheduler: ResultStage 48 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.119 s
+15/11/14 03:09:59 INFO DAGScheduler: Job 25 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.135114 s
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(288) called with curMem=139829157, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_76 stored as values in memory (estimated size 288.0 B, free 926.9 MB)
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=139829445, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_76_piece0 stored as bytes in memory (estimated size 4.0 MB, free 922.9 MB)
+15/11/14 03:09:59 INFO BlockManagerInfo: Added broadcast_76_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 923.0 MB)
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(3276066) called with curMem=144023749, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_76_piece1 stored as bytes in memory (estimated size 3.1 MB, free 919.8 MB)
+15/11/14 03:09:59 INFO BlockManagerInfo: Added broadcast_76_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 919.9 MB)
+15/11/14 03:09:59 INFO SparkContext: Created broadcast 76 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(288) called with curMem=147299815, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_77 stored as values in memory (estimated size 288.0 B, free 919.8 MB)
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(887854) called with curMem=147300103, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_77_piece0 stored as bytes in memory (estimated size 867.0 KB, free 919.0 MB)
+15/11/14 03:09:59 INFO BlockManagerInfo: Added broadcast_77_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 919.0 MB)
+15/11/14 03:09:59 INFO SparkContext: Created broadcast 77 from broadcast at PythonRDD.scala:430
+15/11/14 03:09:59 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:09:59 INFO DAGScheduler: Got job 26 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:09:59 INFO DAGScheduler: Final stage: ResultStage 50(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:59 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 49)
+15/11/14 03:09:59 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:09:59 INFO DAGScheduler: Submitting ResultStage 50 (PythonRDD[33] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=148187957, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_78 stored as values in memory (estimated size 8.3 KB, free 919.0 MB)
+15/11/14 03:09:59 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=148196437, maxMem=1111794647
+15/11/14 03:09:59 INFO MemoryStore: Block broadcast_78_piece0 stored as bytes in memory (estimated size 5.1 KB, free 919.0 MB)
+15/11/14 03:09:59 INFO BlockManagerInfo: Added broadcast_78_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 919.0 MB)
+15/11/14 03:09:59 INFO SparkContext: Created broadcast 78 from broadcast at DAGScheduler.scala:861
+15/11/14 03:09:59 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 50 (PythonRDD[33] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:09:59 INFO TaskSchedulerImpl: Adding task set 50.0 with 3 tasks
+15/11/14 03:09:59 INFO TaskSetManager: Starting task 0.0 in stage 50.0 (TID 77, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:59 INFO TaskSetManager: Starting task 1.0 in stage 50.0 (TID 78, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:59 INFO TaskSetManager: Starting task 2.0 in stage 50.0 (TID 79, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:09:59 INFO Executor: Running task 2.0 in stage 50.0 (TID 79)
+15/11/14 03:09:59 INFO Executor: Running task 1.0 in stage 50.0 (TID 78)
+15/11/14 03:09:59 INFO Executor: Running task 0.0 in stage 50.0 (TID 77)
+15/11/14 03:09:59 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:09:59 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:09:59 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:10:00 INFO PythonRunner: Times: total = 598, boot = -127, init = 134, finish = 591
+15/11/14 03:10:00 INFO Executor: Finished task 2.0 in stage 50.0 (TID 79). 2786181 bytes result sent to driver
+15/11/14 03:10:00 INFO TaskSetManager: Finished task 2.0 in stage 50.0 (TID 79) in 622 ms on localhost (1/3)
+15/11/14 03:10:00 INFO PythonRunner: Times: total = 1064, boot = -14195, init = 14201, finish = 1058
+15/11/14 03:10:00 INFO Executor: Finished task 1.0 in stage 50.0 (TID 78). 2786421 bytes result sent to driver
+15/11/14 03:10:00 INFO TaskSetManager: Finished task 1.0 in stage 50.0 (TID 78) in 1084 ms on localhost (2/3)
+15/11/14 03:10:14 INFO PythonRunner: Times: total = 14979, boot = -13197, init = 13218, finish = 14958
+15/11/14 03:10:14 INFO Executor: Finished task 0.0 in stage 50.0 (TID 77). 2786423 bytes result sent to driver
+15/11/14 03:10:14 INFO TaskSetManager: Finished task 0.0 in stage 50.0 (TID 77) in 15004 ms on localhost (3/3)
+15/11/14 03:10:14 INFO TaskSchedulerImpl: Removed TaskSet 50.0, whose tasks have all completed, from pool 
+15/11/14 03:10:14 INFO DAGScheduler: ResultStage 50 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 15.005 s
+15/11/14 03:10:14 INFO DAGScheduler: Job 26 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 15.020366 s
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(288) called with curMem=148201642, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_79 stored as values in memory (estimated size 288.0 B, free 919.0 MB)
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=148201930, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_79_piece0 stored as bytes in memory (estimated size 4.0 MB, free 915.0 MB)
+15/11/14 03:10:14 INFO BlockManagerInfo: Added broadcast_79_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 915.0 MB)
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(3276052) called with curMem=152396234, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_79_piece1 stored as bytes in memory (estimated size 3.1 MB, free 911.8 MB)
+15/11/14 03:10:14 INFO BlockManagerInfo: Added broadcast_79_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 911.9 MB)
+15/11/14 03:10:14 INFO SparkContext: Created broadcast 79 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(288) called with curMem=155672286, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_80 stored as values in memory (estimated size 288.0 B, free 911.8 MB)
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(887871) called with curMem=155672574, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_80_piece0 stored as bytes in memory (estimated size 867.1 KB, free 911.0 MB)
+15/11/14 03:10:14 INFO BlockManagerInfo: Added broadcast_80_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 911.1 MB)
+15/11/14 03:10:14 INFO SparkContext: Created broadcast 80 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:14 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:10:14 INFO DAGScheduler: Got job 27 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:10:14 INFO DAGScheduler: Final stage: ResultStage 52(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:14 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 51)
+15/11/14 03:10:14 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:10:14 INFO DAGScheduler: Submitting ResultStage 52 (PythonRDD[34] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=156560445, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_81 stored as values in memory (estimated size 8.3 KB, free 911.0 MB)
+15/11/14 03:10:14 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=156568925, maxMem=1111794647
+15/11/14 03:10:14 INFO MemoryStore: Block broadcast_81_piece0 stored as bytes in memory (estimated size 5.1 KB, free 911.0 MB)
+15/11/14 03:10:14 INFO BlockManagerInfo: Added broadcast_81_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 911.1 MB)
+15/11/14 03:10:14 INFO SparkContext: Created broadcast 81 from broadcast at DAGScheduler.scala:861
+15/11/14 03:10:14 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 52 (PythonRDD[34] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:14 INFO TaskSchedulerImpl: Adding task set 52.0 with 3 tasks
+15/11/14 03:10:14 INFO TaskSetManager: Starting task 0.0 in stage 52.0 (TID 80, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:14 INFO TaskSetManager: Starting task 1.0 in stage 52.0 (TID 81, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:14 INFO TaskSetManager: Starting task 2.0 in stage 52.0 (TID 82, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:14 INFO Executor: Running task 0.0 in stage 52.0 (TID 80)
+15/11/14 03:10:14 INFO Executor: Running task 2.0 in stage 52.0 (TID 82)
+15/11/14 03:10:14 INFO Executor: Running task 1.0 in stage 52.0 (TID 81)
+15/11/14 03:10:14 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:10:14 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:10:14 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:10:15 INFO PythonRunner: Times: total = 1004, boot = -14517, init = 14522, finish = 999
+15/11/14 03:10:15 INFO Executor: Finished task 2.0 in stage 52.0 (TID 82). 2786181 bytes result sent to driver
+15/11/14 03:10:15 INFO TaskSetManager: Finished task 2.0 in stage 52.0 (TID 82) in 1026 ms on localhost (1/3)
+15/11/14 03:10:15 INFO PythonRunner: Times: total = 1184, boot = -14053, init = 14059, finish = 1178
+15/11/14 03:10:15 INFO Executor: Finished task 1.0 in stage 52.0 (TID 81). 2786421 bytes result sent to driver
+15/11/14 03:10:15 INFO TaskSetManager: Finished task 1.0 in stage 52.0 (TID 81) in 1208 ms on localhost (2/3)
+15/11/14 03:10:29 INFO PythonRunner: Times: total = 15184, boot = -131, init = 152, finish = 15163
+15/11/14 03:10:29 INFO Executor: Finished task 0.0 in stage 52.0 (TID 80). 2786423 bytes result sent to driver
+15/11/14 03:10:29 INFO TaskSetManager: Finished task 0.0 in stage 52.0 (TID 80) in 15210 ms on localhost (3/3)
+15/11/14 03:10:29 INFO TaskSchedulerImpl: Removed TaskSet 52.0, whose tasks have all completed, from pool 
+15/11/14 03:10:29 INFO DAGScheduler: ResultStage 52 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 15.210 s
+15/11/14 03:10:29 INFO DAGScheduler: Job 27 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 15.226156 s
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(288) called with curMem=156574131, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_82 stored as values in memory (estimated size 288.0 B, free 911.0 MB)
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=156574419, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_82_piece0 stored as bytes in memory (estimated size 4.0 MB, free 907.0 MB)
+15/11/14 03:10:29 INFO BlockManagerInfo: Added broadcast_82_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 907.1 MB)
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(3276072) called with curMem=160768723, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_82_piece1 stored as bytes in memory (estimated size 3.1 MB, free 903.8 MB)
+15/11/14 03:10:29 INFO BlockManagerInfo: Added broadcast_82_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 903.9 MB)
+15/11/14 03:10:29 INFO SparkContext: Created broadcast 82 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(288) called with curMem=164044795, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_83 stored as values in memory (estimated size 288.0 B, free 903.8 MB)
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(887862) called with curMem=164045083, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_83_piece0 stored as bytes in memory (estimated size 867.1 KB, free 903.0 MB)
+15/11/14 03:10:29 INFO BlockManagerInfo: Added broadcast_83_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 903.1 MB)
+15/11/14 03:10:29 INFO SparkContext: Created broadcast 83 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:29 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:10:29 INFO DAGScheduler: Got job 28 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:10:29 INFO DAGScheduler: Final stage: ResultStage 54(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 53)
+15/11/14 03:10:29 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:10:29 INFO DAGScheduler: Submitting ResultStage 54 (PythonRDD[35] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=164932945, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_84 stored as values in memory (estimated size 8.3 KB, free 903.0 MB)
+15/11/14 03:10:29 INFO MemoryStore: ensureFreeSpace(5210) called with curMem=164941425, maxMem=1111794647
+15/11/14 03:10:29 INFO MemoryStore: Block broadcast_84_piece0 stored as bytes in memory (estimated size 5.1 KB, free 903.0 MB)
+15/11/14 03:10:29 INFO BlockManagerInfo: Added broadcast_84_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 903.1 MB)
+15/11/14 03:10:29 INFO SparkContext: Created broadcast 84 from broadcast at DAGScheduler.scala:861
+15/11/14 03:10:29 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 54 (PythonRDD[35] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:29 INFO TaskSchedulerImpl: Adding task set 54.0 with 3 tasks
+15/11/14 03:10:29 INFO TaskSetManager: Starting task 0.0 in stage 54.0 (TID 83, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:29 INFO TaskSetManager: Starting task 1.0 in stage 54.0 (TID 84, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:29 INFO TaskSetManager: Starting task 2.0 in stage 54.0 (TID 85, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:29 INFO Executor: Running task 0.0 in stage 54.0 (TID 83)
+15/11/14 03:10:29 INFO Executor: Running task 1.0 in stage 54.0 (TID 84)
+15/11/14 03:10:29 INFO Executor: Running task 2.0 in stage 54.0 (TID 85)
+15/11/14 03:10:29 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:10:29 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:10:29 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:10:29 INFO PythonRunner: Times: total = 28, boot = -132, init = 139, finish = 21
+15/11/14 03:10:29 INFO Executor: Finished task 2.0 in stage 54.0 (TID 85). 2092 bytes result sent to driver
+15/11/14 03:10:29 INFO TaskSetManager: Finished task 2.0 in stage 54.0 (TID 85) in 36 ms on localhost (1/3)
+15/11/14 03:10:30 INFO PythonRunner: Times: total = 922, boot = -14140, init = 14148, finish = 914
+15/11/14 03:10:30 INFO BlockManagerInfo: Removed broadcast_78_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 903.1 MB)
+15/11/14 03:10:30 INFO ContextCleaner: Cleaned accumulator 30
+15/11/14 03:10:30 INFO BlockManagerInfo: Removed broadcast_81_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 903.1 MB)
+15/11/14 03:10:30 INFO ContextCleaner: Cleaned accumulator 28
+15/11/14 03:10:30 INFO Executor: Finished task 1.0 in stage 54.0 (TID 84). 2786421 bytes result sent to driver
+15/11/14 03:10:30 INFO BlockManagerInfo: Removed broadcast_75_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 903.1 MB)
+15/11/14 03:10:30 INFO ContextCleaner: Cleaned accumulator 29
+15/11/14 03:10:30 INFO TaskSetManager: Finished task 1.0 in stage 54.0 (TID 84) in 958 ms on localhost (2/3)
+15/11/14 03:10:43 INFO PythonRunner: Times: total = 13180, boot = -14313, init = 14335, finish = 13158
+15/11/14 03:10:43 INFO Executor: Finished task 0.0 in stage 54.0 (TID 83). 2786423 bytes result sent to driver
+15/11/14 03:10:43 INFO TaskSetManager: Finished task 0.0 in stage 54.0 (TID 83) in 13205 ms on localhost (3/3)
+15/11/14 03:10:43 INFO TaskSchedulerImpl: Removed TaskSet 54.0, whose tasks have all completed, from pool 
+15/11/14 03:10:43 INFO DAGScheduler: ResultStage 54 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.207 s
+15/11/14 03:10:43 INFO DAGScheduler: Job 28 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.221343 s
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(288) called with curMem=164905579, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_85 stored as values in memory (estimated size 288.0 B, free 903.0 MB)
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=164905867, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_85_piece0 stored as bytes in memory (estimated size 4.0 MB, free 899.0 MB)
+15/11/14 03:10:43 INFO BlockManagerInfo: Added broadcast_85_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 899.1 MB)
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(3276095) called with curMem=169100171, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_85_piece1 stored as bytes in memory (estimated size 3.1 MB, free 895.9 MB)
+15/11/14 03:10:43 INFO BlockManagerInfo: Added broadcast_85_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 896.0 MB)
+15/11/14 03:10:43 INFO SparkContext: Created broadcast 85 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(288) called with curMem=172376266, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_86 stored as values in memory (estimated size 288.0 B, free 895.9 MB)
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(887831) called with curMem=172376554, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_86_piece0 stored as bytes in memory (estimated size 867.0 KB, free 895.1 MB)
+15/11/14 03:10:43 INFO BlockManagerInfo: Added broadcast_86_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 895.1 MB)
+15/11/14 03:10:43 INFO SparkContext: Created broadcast 86 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:43 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:10:43 INFO DAGScheduler: Got job 29 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:10:43 INFO DAGScheduler: Final stage: ResultStage 56(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:43 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 55)
+15/11/14 03:10:43 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:10:43 INFO DAGScheduler: Submitting ResultStage 56 (PythonRDD[36] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=173264385, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_87 stored as values in memory (estimated size 8.3 KB, free 895.0 MB)
+15/11/14 03:10:43 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=173272865, maxMem=1111794647
+15/11/14 03:10:43 INFO MemoryStore: Block broadcast_87_piece0 stored as bytes in memory (estimated size 5.1 KB, free 895.0 MB)
+15/11/14 03:10:43 INFO BlockManagerInfo: Added broadcast_87_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 895.1 MB)
+15/11/14 03:10:43 INFO SparkContext: Created broadcast 87 from broadcast at DAGScheduler.scala:861
+15/11/14 03:10:43 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 56 (PythonRDD[36] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:43 INFO TaskSchedulerImpl: Adding task set 56.0 with 3 tasks
+15/11/14 03:10:43 INFO TaskSetManager: Starting task 0.0 in stage 56.0 (TID 86, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:43 INFO TaskSetManager: Starting task 1.0 in stage 56.0 (TID 87, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:43 INFO TaskSetManager: Starting task 2.0 in stage 56.0 (TID 88, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:43 INFO Executor: Running task 0.0 in stage 56.0 (TID 86)
+15/11/14 03:10:43 INFO Executor: Running task 1.0 in stage 56.0 (TID 87)
+15/11/14 03:10:43 INFO Executor: Running task 2.0 in stage 56.0 (TID 88)
+15/11/14 03:10:43 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:10:43 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:10:43 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:10:43 INFO PythonRunner: Times: total = 756, boot = -12370, init = 12374, finish = 752
+15/11/14 03:10:43 INFO Executor: Finished task 2.0 in stage 56.0 (TID 88). 2786181 bytes result sent to driver
+15/11/14 03:10:44 INFO TaskSetManager: Finished task 2.0 in stage 56.0 (TID 88) in 783 ms on localhost (1/3)
+15/11/14 03:10:44 INFO PythonRunner: Times: total = 1187, boot = -114, init = 122, finish = 1179
+15/11/14 03:10:44 INFO Executor: Finished task 1.0 in stage 56.0 (TID 87). 2786421 bytes result sent to driver
+15/11/14 03:10:44 INFO TaskSetManager: Finished task 1.0 in stage 56.0 (TID 87) in 1211 ms on localhost (2/3)
+15/11/14 03:10:57 INFO PythonRunner: Times: total = 14255, boot = -13267, init = 13290, finish = 14232
+15/11/14 03:10:57 INFO Executor: Finished task 0.0 in stage 56.0 (TID 86). 2786423 bytes result sent to driver
+15/11/14 03:10:57 INFO TaskSetManager: Finished task 0.0 in stage 56.0 (TID 86) in 14283 ms on localhost (3/3)
+15/11/14 03:10:57 INFO TaskSchedulerImpl: Removed TaskSet 56.0, whose tasks have all completed, from pool 
+15/11/14 03:10:57 INFO DAGScheduler: ResultStage 56 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.283 s
+15/11/14 03:10:57 INFO DAGScheduler: Job 29 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.299575 s
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(288) called with curMem=173278070, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_88 stored as values in memory (estimated size 288.0 B, free 895.0 MB)
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=173278358, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_88_piece0 stored as bytes in memory (estimated size 4.0 MB, free 891.0 MB)
+15/11/14 03:10:57 INFO BlockManagerInfo: Added broadcast_88_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 891.1 MB)
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(3275950) called with curMem=177472662, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_88_piece1 stored as bytes in memory (estimated size 3.1 MB, free 887.9 MB)
+15/11/14 03:10:57 INFO BlockManagerInfo: Added broadcast_88_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 888.0 MB)
+15/11/14 03:10:57 INFO SparkContext: Created broadcast 88 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(288) called with curMem=180748612, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_89 stored as values in memory (estimated size 288.0 B, free 887.9 MB)
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(887818) called with curMem=180748900, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_89_piece0 stored as bytes in memory (estimated size 867.0 KB, free 887.1 MB)
+15/11/14 03:10:57 INFO BlockManagerInfo: Added broadcast_89_piece0 in memory on localhost:35937 (size: 867.0 KB, free: 887.2 MB)
+15/11/14 03:10:57 INFO SparkContext: Created broadcast 89 from broadcast at PythonRDD.scala:430
+15/11/14 03:10:57 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:10:57 INFO DAGScheduler: Got job 30 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:10:57 INFO DAGScheduler: Final stage: ResultStage 58(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:57 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 57)
+15/11/14 03:10:57 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:10:57 INFO DAGScheduler: Submitting ResultStage 58 (PythonRDD[37] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=181636718, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_90 stored as values in memory (estimated size 8.3 KB, free 887.1 MB)
+15/11/14 03:10:57 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=181645198, maxMem=1111794647
+15/11/14 03:10:57 INFO MemoryStore: Block broadcast_90_piece0 stored as bytes in memory (estimated size 5.1 KB, free 887.1 MB)
+15/11/14 03:10:57 INFO BlockManagerInfo: Added broadcast_90_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 887.2 MB)
+15/11/14 03:10:57 INFO SparkContext: Created broadcast 90 from broadcast at DAGScheduler.scala:861
+15/11/14 03:10:57 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 58 (PythonRDD[37] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:10:57 INFO TaskSchedulerImpl: Adding task set 58.0 with 3 tasks
+15/11/14 03:10:57 INFO TaskSetManager: Starting task 0.0 in stage 58.0 (TID 89, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:57 INFO TaskSetManager: Starting task 1.0 in stage 58.0 (TID 90, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:57 INFO TaskSetManager: Starting task 2.0 in stage 58.0 (TID 91, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:10:57 INFO Executor: Running task 0.0 in stage 58.0 (TID 89)
+15/11/14 03:10:57 INFO Executor: Running task 2.0 in stage 58.0 (TID 91)
+15/11/14 03:10:57 INFO Executor: Running task 1.0 in stage 58.0 (TID 90)
+15/11/14 03:10:57 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:10:57 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:10:57 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:10:58 INFO PythonRunner: Times: total = 1223, boot = -119, init = 123, finish = 1219
+15/11/14 03:10:58 INFO Executor: Finished task 2.0 in stage 58.0 (TID 91). 2786181 bytes result sent to driver
+15/11/14 03:10:58 INFO TaskSetManager: Finished task 2.0 in stage 58.0 (TID 91) in 1245 ms on localhost (1/3)
+15/11/14 03:10:58 INFO PythonRunner: Times: total = 1375, boot = -13617, init = 13620, finish = 1372
+15/11/14 03:10:58 INFO Executor: Finished task 1.0 in stage 58.0 (TID 90). 2786421 bytes result sent to driver
+15/11/14 03:10:59 INFO TaskSetManager: Finished task 1.0 in stage 58.0 (TID 90) in 1400 ms on localhost (2/3)
+15/11/14 03:11:11 INFO PythonRunner: Times: total = 14024, boot = -13191, init = 13206, finish = 14009
+15/11/14 03:11:11 INFO Executor: Finished task 0.0 in stage 58.0 (TID 89). 2786423 bytes result sent to driver
+15/11/14 03:11:11 INFO TaskSetManager: Finished task 0.0 in stage 58.0 (TID 89) in 14049 ms on localhost (3/3)
+15/11/14 03:11:11 INFO TaskSchedulerImpl: Removed TaskSet 58.0, whose tasks have all completed, from pool 
+15/11/14 03:11:11 INFO DAGScheduler: ResultStage 58 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.049 s
+15/11/14 03:11:11 INFO DAGScheduler: Job 30 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.066914 s
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(288) called with curMem=181650403, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_91 stored as values in memory (estimated size 288.0 B, free 887.1 MB)
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=181650691, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_91_piece0 stored as bytes in memory (estimated size 4.0 MB, free 883.1 MB)
+15/11/14 03:11:11 INFO BlockManagerInfo: Added broadcast_91_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 883.2 MB)
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(3275986) called with curMem=185844995, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_91_piece1 stored as bytes in memory (estimated size 3.1 MB, free 879.9 MB)
+15/11/14 03:11:11 INFO BlockManagerInfo: Added broadcast_91_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 880.0 MB)
+15/11/14 03:11:11 INFO SparkContext: Created broadcast 91 from broadcast at PythonRDD.scala:430
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(288) called with curMem=189120981, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_92 stored as values in memory (estimated size 288.0 B, free 879.9 MB)
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(887870) called with curMem=189121269, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_92_piece0 stored as bytes in memory (estimated size 867.1 KB, free 879.1 MB)
+15/11/14 03:11:11 INFO BlockManagerInfo: Added broadcast_92_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 879.2 MB)
+15/11/14 03:11:11 INFO SparkContext: Created broadcast 92 from broadcast at PythonRDD.scala:430
+15/11/14 03:11:11 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:11:11 INFO DAGScheduler: Got job 31 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:11:11 INFO DAGScheduler: Final stage: ResultStage 60(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:11:11 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 59)
+15/11/14 03:11:11 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:11:11 INFO DAGScheduler: Submitting ResultStage 60 (PythonRDD[38] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=190009139, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_93 stored as values in memory (estimated size 8.3 KB, free 879.1 MB)
+15/11/14 03:11:11 INFO MemoryStore: ensureFreeSpace(5205) called with curMem=190017619, maxMem=1111794647
+15/11/14 03:11:11 INFO MemoryStore: Block broadcast_93_piece0 stored as bytes in memory (estimated size 5.1 KB, free 879.1 MB)
+15/11/14 03:11:11 INFO BlockManagerInfo: Added broadcast_93_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 879.2 MB)
+15/11/14 03:11:11 INFO SparkContext: Created broadcast 93 from broadcast at DAGScheduler.scala:861
+15/11/14 03:11:11 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 60 (PythonRDD[38] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:11:11 INFO TaskSchedulerImpl: Adding task set 60.0 with 3 tasks
+15/11/14 03:11:11 INFO TaskSetManager: Starting task 0.0 in stage 60.0 (TID 92, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:11 INFO TaskSetManager: Starting task 1.0 in stage 60.0 (TID 93, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:11 INFO TaskSetManager: Starting task 2.0 in stage 60.0 (TID 94, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:11 INFO Executor: Running task 0.0 in stage 60.0 (TID 92)
+15/11/14 03:11:11 INFO Executor: Running task 2.0 in stage 60.0 (TID 94)
+15/11/14 03:11:11 INFO Executor: Running task 1.0 in stage 60.0 (TID 93)
+15/11/14 03:11:11 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:11:11 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:11:11 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:11:11 INFO PythonRunner: Times: total = 25, boot = -12931, init = 12935, finish = 21
+15/11/14 03:11:11 INFO Executor: Finished task 2.0 in stage 60.0 (TID 94). 2092 bytes result sent to driver
+15/11/14 03:11:11 INFO TaskSetManager: Finished task 2.0 in stage 60.0 (TID 94) in 37 ms on localhost (1/3)
+15/11/14 03:11:12 INFO PythonRunner: Times: total = 1017, boot = -126, init = 135, finish = 1008
+15/11/14 03:11:12 INFO Executor: Finished task 1.0 in stage 60.0 (TID 93). 2786421 bytes result sent to driver
+15/11/14 03:11:12 INFO TaskSetManager: Finished task 1.0 in stage 60.0 (TID 93) in 1042 ms on localhost (2/3)
+15/11/14 03:11:25 INFO PythonRunner: Times: total = 13846, boot = -12782, init = 12804, finish = 13824
+15/11/14 03:11:25 INFO Executor: Finished task 0.0 in stage 60.0 (TID 92). 2786423 bytes result sent to driver
+15/11/14 03:11:25 INFO TaskSetManager: Finished task 0.0 in stage 60.0 (TID 92) in 13873 ms on localhost (3/3)
+15/11/14 03:11:25 INFO TaskSchedulerImpl: Removed TaskSet 60.0, whose tasks have all completed, from pool 
+15/11/14 03:11:25 INFO DAGScheduler: ResultStage 60 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 13.875 s
+15/11/14 03:11:25 INFO DAGScheduler: Job 31 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 13.889465 s
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(288) called with curMem=190022824, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_94 stored as values in memory (estimated size 288.0 B, free 879.1 MB)
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(4194304) called with curMem=190023112, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_94_piece0 stored as bytes in memory (estimated size 4.0 MB, free 875.1 MB)
+15/11/14 03:11:25 INFO BlockManagerInfo: Added broadcast_94_piece0 in memory on localhost:35937 (size: 4.0 MB, free: 875.2 MB)
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(3276003) called with curMem=194217416, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_94_piece1 stored as bytes in memory (estimated size 3.1 MB, free 871.9 MB)
+15/11/14 03:11:25 INFO BlockManagerInfo: Added broadcast_94_piece1 in memory on localhost:35937 (size: 3.1 MB, free: 872.1 MB)
+15/11/14 03:11:25 INFO SparkContext: Created broadcast 94 from broadcast at PythonRDD.scala:430
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(288) called with curMem=197493419, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_95 stored as values in memory (estimated size 288.0 B, free 871.9 MB)
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(887882) called with curMem=197493707, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_95_piece0 stored as bytes in memory (estimated size 867.1 KB, free 871.1 MB)
+15/11/14 03:11:25 INFO BlockManagerInfo: Added broadcast_95_piece0 in memory on localhost:35937 (size: 867.1 KB, free: 871.2 MB)
+15/11/14 03:11:25 INFO SparkContext: Created broadcast 95 from broadcast at PythonRDD.scala:430
+15/11/14 03:11:25 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237
+15/11/14 03:11:25 INFO DAGScheduler: Got job 32 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) with 3 output partitions
+15/11/14 03:11:25 INFO DAGScheduler: Final stage: ResultStage 62(collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:11:25 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 61)
+15/11/14 03:11:25 INFO DAGScheduler: Missing parents: List()
+15/11/14 03:11:25 INFO DAGScheduler: Submitting ResultStage 62 (PythonRDD[39] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237), which has no missing parents
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(8480) called with curMem=198381589, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_96 stored as values in memory (estimated size 8.3 KB, free 871.1 MB)
+15/11/14 03:11:25 INFO MemoryStore: ensureFreeSpace(5206) called with curMem=198390069, maxMem=1111794647
+15/11/14 03:11:25 INFO MemoryStore: Block broadcast_96_piece0 stored as bytes in memory (estimated size 5.1 KB, free 871.1 MB)
+15/11/14 03:11:25 INFO BlockManagerInfo: Added broadcast_96_piece0 in memory on localhost:35937 (size: 5.1 KB, free: 871.2 MB)
+15/11/14 03:11:25 INFO SparkContext: Created broadcast 96 from broadcast at DAGScheduler.scala:861
+15/11/14 03:11:25 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 62 (PythonRDD[39] at collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237)
+15/11/14 03:11:25 INFO TaskSchedulerImpl: Adding task set 62.0 with 3 tasks
+15/11/14 03:11:25 INFO TaskSetManager: Starting task 0.0 in stage 62.0 (TID 95, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:25 INFO TaskSetManager: Starting task 1.0 in stage 62.0 (TID 96, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:25 INFO TaskSetManager: Starting task 2.0 in stage 62.0 (TID 97, localhost, PROCESS_LOCAL, 1958 bytes)
+15/11/14 03:11:25 INFO Executor: Running task 0.0 in stage 62.0 (TID 95)
+15/11/14 03:11:25 INFO Executor: Running task 1.0 in stage 62.0 (TID 96)
+15/11/14 03:11:25 INFO Executor: Running task 2.0 in stage 62.0 (TID 97)
+15/11/14 03:11:25 INFO BlockManager: Found block rdd_9_1 locally
+15/11/14 03:11:25 INFO BlockManager: Found block rdd_9_2 locally
+15/11/14 03:11:25 INFO BlockManager: Found block rdd_9_0 locally
+15/11/14 03:11:25 INFO ContextCleaner: Cleaned accumulator 32
+15/11/14 03:11:25 INFO BlockManagerInfo: Removed broadcast_87_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 871.2 MB)
+15/11/14 03:11:25 INFO ContextCleaner: Cleaned accumulator 33
+15/11/14 03:11:25 INFO BlockManagerInfo: Removed broadcast_90_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 871.2 MB)
+15/11/14 03:11:25 INFO ContextCleaner: Cleaned accumulator 34
+15/11/14 03:11:25 INFO BlockManagerInfo: Removed broadcast_93_piece0 on localhost:35937 in memory (size: 5.1 KB, free: 871.2 MB)
+15/11/14 03:11:26 INFO PythonRunner: Times: total = 753, boot = -12987, init = 12993, finish = 747
+15/11/14 03:11:26 INFO Executor: Finished task 2.0 in stage 62.0 (TID 97). 2786181 bytes result sent to driver
+15/11/14 03:11:26 INFO TaskSetManager: Finished task 2.0 in stage 62.0 (TID 97) in 779 ms on localhost (1/3)
+15/11/14 03:11:26 INFO PythonRunner: Times: total = 1211, boot = -13971, init = 13978, finish = 1204
+15/11/14 03:11:27 INFO Executor: Finished task 1.0 in stage 62.0 (TID 96). 2786421 bytes result sent to driver
+15/11/14 03:11:27 INFO TaskSetManager: Finished task 1.0 in stage 62.0 (TID 96) in 1235 ms on localhost (2/3)
+15/11/14 03:11:39 INFO PythonRunner: Times: total = 14073, boot = -151, init = 192, finish = 14032
+15/11/14 03:11:39 INFO Executor: Finished task 0.0 in stage 62.0 (TID 95). 2786423 bytes result sent to driver
+15/11/14 03:11:39 INFO TaskSetManager: Finished task 0.0 in stage 62.0 (TID 95) in 14099 ms on localhost (3/3)
+15/11/14 03:11:39 INFO TaskSchedulerImpl: Removed TaskSet 62.0, whose tasks have all completed, from pool 
+15/11/14 03:11:39 INFO DAGScheduler: ResultStage 62 (collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237) finished in 14.101 s
+15/11/14 03:11:39 INFO DAGScheduler: Job 32 finished: collect at /afs/andrew.cmu.edu/usr17/dingz/dsgd_mf.py:237, took 14.115295 s
+15/11/14 03:11:51 INFO SparkUI: Stopped Spark web UI at http://128.2.13.161:4040
+15/11/14 03:11:51 INFO DAGScheduler: Stopping DAGScheduler
+15/11/14 03:11:51 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+15/11/14 03:11:51 INFO MemoryStore: MemoryStore cleared
+15/11/14 03:11:51 INFO BlockManager: BlockManager stopped
+15/11/14 03:11:51 INFO BlockManagerMaster: BlockManagerMaster stopped
+15/11/14 03:11:51 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+15/11/14 03:11:51 INFO SparkContext: Successfully stopped SparkContext
+15/11/14 03:11:51 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+15/11/14 03:11:51 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+15/11/14 03:11:51 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+15/11/14 03:11:54 INFO ShutdownHookManager: Shutdown hook called
+15/11/14 03:11:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-2a4975c3-d2ec-4faa-aebf-c896f50dd7a5/pyspark-a5f5cdd9-8783-4150-b76e-92513398c191
+15/11/14 03:11:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-2a4975c3-d2ec-4faa-aebf-c896f50dd7a5
